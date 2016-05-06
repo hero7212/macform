@@ -1,0 +1,96 @@
+body{background:#f9f9f9;font-family: tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;font-size: 14px;}
+.header{background: #333; padding:0 20px;color: #ccc; height: 50px; line-height: 50px; width: 100%}
+.headerCon{width: 1200px; margin:auto; }
+.fr{ float: right;}
+.mb{ margin-bottom: 10px}
+.header a{color: #6b6b6b; cursor: pointer;}
+.header .fr{ font-size: 12px}
+
+.main{width: 1200px; margin:auto;}
+h2{font-size: 18px; margin: 20px 0}
+h3{ font-size: 14px; margin: 0 0 10px 0; padding: 10px; background:#337ab7; color: #def0ff; border-radius: 4px}
+h3 i{cursor: pointer;; color: #fff}
+
+.main .col-md-6:nth-of-type(1){ padding: 0 20px 0 0}
+.main .col-md-6:nth-of-type(2){ padding: 0}
+.con{background: #fff; border: 1px solid #ddd; padding: 15px;min-height: 718px; overflow: auto}
+.main .col-md-6:nth-of-type(1) .con{border-top: 0}
+.col-md-3 .con{border-top:0;}
+
+.show{background: #fff; border: 1px solid #ddd; min-height: 760px; overflow-x: hidden;overflow-y: auto; position: relative;}
+.show h2,.show h4{ text-align: center; margin: 15px 0;}
+.show h2{ font-size: 18px}
+.show h4{ font-size: 14px}
+.show>.form-group{ padding:10px 20px;}
+.btnBox{ position: absolute; bottom: 0; padding: 10px; background: #f2f2f2; width: 370px}
+
+.con button{
+    margin:10px 15px;
+}
+.show>.form-group:hover{ border: 1px dashed #c0c0c0}
+.show>.form-group{
+    position: relative;
+    cursor: move;
+}
+.show>.form-group .close{
+    display: none;
+}
+
+#edit{
+    background: white;
+    height: 760px;
+    border:1px solid #c0c0c0;
+}
+
+.choose{
+    text-align: center;
+    margin:20px auto;
+    font-size: 20px;
+    padding: 20px;
+    border:1px dashed #c0c0c0;
+}
+
+#fields{
+    padding: 0 20px;
+}
+
+#edit{
+    overflow-y: scroll;
+}
+
+.banner{
+    /*display: flex;*/
+}
+
+.banner>img{
+    flex: 1;
+    display:inline-block;
+}
+
+.share .text-black{
+    position: relative;
+    bottom: -5px;
+}
+
+.share .text-muted{
+    position: relative;
+    top: -5px;
+}
+
+#mobile{
+    overflow-y:scroll;
+    max-height: 760px;
+}
+
+.wrap{
+
+}
+
+.wrap>.text-center{
+    padding: 0 !important;
+
+}
+
+.space{
+    height: 100px;
+}
