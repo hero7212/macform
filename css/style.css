@@ -8,25 +8,24 @@ body{background:#f9f9f9;font-family: tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,
 
 .main{width: 1200px; margin:auto;}
 h2{font-size: 18px; margin: 20px 0}
-h3{ font-size: 14px; margin: 0 0 10px 0; padding: 10px; background:#337ab7; color: #def0ff; border-radius: 4px}
+h3{ font-size: 14px; margin: 0 0 15px 0; padding: 10px; background:#337ab7; color: #def0ff; border-radius: 4px}
 h3 i{cursor: pointer;; color: #fff}
 
-.main .col-md-6:nth-of-type(1){ padding: 0 20px 0 0}
-.main .col-md-6:nth-of-type(2){ padding: 0}
-.con{background: #fff; border: 1px solid #ddd; padding: 15px;min-height: 718px; overflow: auto}
-.main .col-md-6:nth-of-type(1) .con{border-top: 0}
-.col-md-3 .con{border-top:0;}
+.main .col-md-4:nth-of-type(1){ padding: 0 20px 0 0;}
+.main .col-md-4:nth-of-type(2){ padding: 0}
+.main .col-md-4:nth-of-type(3){ padding: 0 0 0 20px}
+.con{background: #fff; border: 1px solid #ddd; padding: 15px;height: 718px; overflow-y: auto}
+.main .col-md-4:nth-of-type(1) .con{border-top: 0;}
+.main .col-md-4:nth-of-type(3) h3{border-radius: 4px 4px 0 0 ;margin: 0; padding: 14px 10px 13px 10px}
 
-.show{background: #fff; border: 1px solid #ddd; min-height: 760px; overflow-x: hidden;overflow-y: auto; position: relative;}
+.show{background: #fff; border: 1px solid #ddd; height: 705px; overflow-x: hidden;overflow-y: auto; position: relative; border-bottom: 0}
 .show h2,.show h4{ text-align: center; margin: 15px 0;}
 .show h2{ font-size: 18px}
 .show h4{ font-size: 14px}
-.show>.form-group{ padding:10px 20px;}
-.btnBox{ position: absolute; bottom: 0; padding: 10px; background: #f2f2f2; width: 370px}
+.show .form-group{ padding:0}
+.btnBox{padding: 10px; background: #f2f2f2; width: 400px; border: 1px solid #ddd; border-top: 0}
 
-.con button{
-    margin:10px 15px;
-}
+.con button{}
 .show>.form-group:hover{ border: 1px dashed #c0c0c0}
 .show>.form-group{
     position: relative;
@@ -36,26 +35,20 @@ h3 i{cursor: pointer;; color: #fff}
     display: none;
 }
 
-#edit{
-    background: white;
-    height: 760px;
-    border:1px solid #c0c0c0;
+.formLabel{
+    margin-top:6px;
 }
 
 .choose{
     text-align: center;
-    margin:20px auto;
-    font-size: 20px;
+    margin:0 auto 20px auto;
+    font-size: 14px;
     padding: 20px;
     border:1px dashed #c0c0c0;
 }
 
 #fields{
-    padding: 0 20px;
-}
-
-#edit{
-    overflow-y: scroll;
+    padding: 0;
 }
 
 .banner{
@@ -77,9 +70,8 @@ h3 i{cursor: pointer;; color: #fff}
     top: -5px;
 }
 
-#mobile{
-    overflow-y:scroll;
-    max-height: 760px;
+#mobile {
+
 }
 
 .wrap{
@@ -92,5 +84,41 @@ h3 i{cursor: pointer;; color: #fff}
 }
 
 .space{
-    height: 100px;
+    padding: 0 15px;
+    overflow-y: scroll;
+}
+
+.groupT>div{
+    border-bottom:1px dashed #c0c0c0;
+}
+
+#edit>div{
+    border-bottom:1px dashed #c0c0c0;
+}
+#edit>div.con{
+    border-bottom:1px solid #ccc;
+}
+
+.plusMinus{
+    text-align: right;
+}
+
+
+.formCon .row{ float: left; margin:0 10px 0 0}
+
+
+.clean{ clear: both;}
+hr.clean{ margin: 15px 0}
+.formCon{ overflow: hidden;}
+.con .checkbox, .con .radio{ margin: 0}
+.checkbox label.checkbox-block{margin:5px 0; display: block;}
+
+.chosen{
+    background: white;
+    height: 718px;
+    overflow-y: scroll;
+}
+
+.trees .theCon{
+    display: none;
 }

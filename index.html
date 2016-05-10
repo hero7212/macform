@@ -41,9 +41,53 @@
                 <input class="form-control" placeholder="请输入标题">
             </div>
             <div class="form-group">
+                <label>标题字号大小</label>
+                    <select name="" id="" class="form-control">
+                        <option value="12">12</option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                        <option value="20">20</option>
+                        <option value="32">32</option>
+                        <option value="48">48</option>
+                    </select>
+            </div>
+            <div class="form-group">
                 <label>副标题</label>
                 <input class="form-control" placeholder="请输入副标题">
             </div>
+            <div class="form-group">
+                <label>副标题字号大小</label>
+                    <select name="" id="" class="form-control">
+                        <option value="12">12</option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                        <option value="20">20</option>
+                        <option value="32">32</option>
+                        <option value="48">48</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label>标题对齐方式</label>
+            <div class="radio">
+                <label class="radio-inline">
+                    <input type="radio" name="o"> 左对齐
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="o"> 右对齐
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="o" checked=""> 居中对齐
+                </label>
+            </div>
+            </div>
+            <h3>表单提交</h3>
+            <div class="form-group">
+                <label>表单提交后显示提示文字</label>
+                <input class="form-control" placeholder="请输入提示文字">
+            </div>
+            <!--
             <h3>填写限制</h3>
             <div class="checkbox">
                   <label>
@@ -54,53 +98,71 @@
                   <label>
                     <input type="checkbox"> 定时停用表单
                   </label>
-                </div>
+            </div>
+            -->
+            <!--
             <h3>表单提交</h3>
             <div class="form-group">
-                  <label>用户提交表单后</label>
-                  <div class="mb">
-                  <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked=""> 显示文字
-            </label><label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 跳转到指定页面
-          </label></div>
-                  <input class="form-control" placeholder="请输入文字">
+                <label>用户提交表单后</label>
+                <div class="mb">
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked=""> 显示文字
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 跳转到指定页面
+                    </label>
                 </div>
+                <input class="form-control" placeholder="请输入文字">
+            </div>
+            --><div class="form-group">
+            <label>反馈到达设置</label>
+            <div class="checkbox">
+                <label class="checkbox-block">
+                    <input type="checkbox"> 发送邮件通知
+                </label>
+                <label class="checkbox-block">
+                    <input type="checkbox"> 发送短信通知
+                </label>
+                <label class="checkbox-block">
+                    <input type="checkbox"> 发送微信通知
+                </label>
+            </div>
+        </div>
         </div>
 
         <div class="con" style="display: none;">
+           <div class="formCon">
             <!--图片组件-->
             <div class="row">
-                <button class="btn btn-default col-md-3" id="picture">
+                <button class="btn btn-default" id="picture">
                     图片
                 </button>
             </div>
             <!--轮播图组件-->
-            <hr/>
             <div class="row">
 
-                <button class="btn btn-default col-md-3" id="banner">
+                <button class="btn btn-default" id="banner">
                     轮播
                 </button>
             </div>
             <!--分割线组件-->
-            <hr/>
             <div class="row">
-                <button class="btn btn-default col-md-3" id="share">
+                <button class="btn btn-default" id="share">
                     分隔线
                 </button>
             </div>
             <!--公告组件-->
-            <hr/>
             <div class="row">
 
-                <button class="btn btn-default col-md-3" id="notice">
+                <button class="btn btn-default" id="notice">
                     公告
                 </button>
 
             </div>
+        </div>
+            <hr class="clean" />
+           <div class="formCon">
             <!--表单提交组件-->
-            <hr/>
             <div class="row">
                 <button class="btn btn-warning" id="handIn">表单提交组件</button>
             </div>
@@ -135,7 +197,34 @@
                 </button>
             </div>
         </div>
-        <div class="con" style="display: none">3</div>
+        </div>
+        <div class="con" style="display: none">
+            <div class="form-group col-md-6">
+                <label>背景颜色</label>
+                <input type="color" class="form-control input-lg">
+            </div>
+            <div class="form-group col-md-6">
+                <label>表头底色</label>
+                <input type="color" class="form-control input-lg">
+            </div>
+            <div class="form-group col-md-6">
+                <label>题目文字</label>
+                <input type="color" class="form-control input-lg">
+            </div>
+            <div class="form-group col-md-6">
+                <label>内容底色</label>
+                <input type="color" class="form-control input-lg">
+            </div>
+            <div class="form-group col-md-6">
+                <label>表头文字</label>
+                <input type="color" class="form-control input-lg">
+            </div>
+            <div class="form-group col-md-6">
+                <label>描述文字</label>
+                <input type="color" class="form-control input-lg">
+            </div>
+
+        </div>
 
 
 
@@ -143,16 +232,17 @@
     </div>
     <div class="col-md-4 bg-danger" id="mobile">
         <div class="show">
-            <div class="bg-primary" style="height: 80px;">
                 <h1 class="text-center">这里是标题</h1>
                 <h4>这里是副标题</h4>
-            </div>
             <div id="fields">
 
             </div>
 
 
             <div class="space"></div>
+
+        </div>
+
             <div class="btnBox">
                 <button class="btn w-xs btn-primary">保存</button>
                 <div class="fr">
@@ -160,23 +250,317 @@
                     <button class="btn w-xs btn-default">预览</button>
                 </div>
             </div>
-
-        </div>
     </div>
+    <!--
     <div class="col-md-4" id="edit">
 
-        <p class="choose">请选择组件</p>
-
+        <div class="con">
+            <p class="choose">请选择组件</p>
+        </div>
+    </div>
+    -->
+    <div class="col-md-4 chosen">
+        <h3>组件编辑</h3>
+        <div class="conE">
+            <p class="choose">请选择组件</p>
+        </div>
+        <div class="trees" id="edit">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> 姓名
+                </label>
+            </div>
+            <div class="theCon">
+                <div class="form-group">
+                <label>姓名</label>
+                <input class="form-control" placeholder="请输入标题">
+                </div>
+                <div class="form-group">
+                <label>描述文字</label>
+                <input class="form-control" placeholder="请输入描述文字">
+                </div>
+                <div class="form-group">
+                <h4>必填设置</h4>
+                <label class="checkbox-inline">
+                    <input type="radio" name="nameT"> 必填
+                    </label>
+                <label class="checkbox-inline">
+                    <input type="radio" name="nameT"> 非必填
+                    </label>
+                </div>
+                <div class="form-group">
+                <h4>输入框大小</h4>
+                <label class="checkbox-inline">
+                    <input type="radio" name="nameT2"> 小尺寸
+                    </label>
+                <label class="checkbox-inline">
+                    <input type="radio" name="nameT2"> 标准尺寸
+                </label>
+                <label class="checkbox-inline">
+                    <input type="radio" name="nameT2"> 大尺寸
+                    </label>
+                </div>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> 电话号码
+                </label>
+            </div>
+            <div class="theCon">
+                <div class="form-group">
+                    <label>电话号码</label>
+                    <input class="form-control" placeholder="请输入标题">
+                </div>
+                <div class="form-group">
+                    <label>描述文字</label>
+                    <input class="form-control" placeholder="请输入描述文字">
+                </div>
+                <div class="form-group">
+                    <h4>必填设置</h4>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT"> 必填
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT"> 非必填
+                    </label>
+                </div>
+                <div class="form-group">
+                    <h4>输入框大小</h4>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 小尺寸
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 标准尺寸
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 大尺寸
+                    </label>
+                </div>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> 公司名称
+                </label>
+            </div>
+            <div class="theCon">
+                <div class="form-group">
+                    <label>公司名称</label>
+                    <input class="form-control" placeholder="请输入标题">
+                </div>
+                <div class="form-group">
+                    <label>描述文字</label>
+                    <input class="form-control" placeholder="请输入描述文字">
+                </div>
+                <div class="form-group">
+                    <h4>必填设置</h4>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT"> 必填
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT"> 非必填
+                    </label>
+                </div>
+                <div class="form-group">
+                    <h4>输入框大小</h4>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 小尺寸
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 标准尺寸
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 大尺寸
+                    </label>
+                </div>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> 性别
+                </label>
+            </div>
+            <div class="theCon">
+                <div class="form-group">
+                    <label>性别</label>
+                    <input class="form-control" placeholder="请输入标题">
+                </div>
+                <div class="form-group">
+                    <h4>必填设置</h4>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT"> 必填
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT"> 非必填
+                    </label>
+                </div>
+                <div class="form-group">
+                    <h4>排列方式</h4>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 一列
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 二列
+                    </label>
+                </div>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> E-mail
+                </label>
+            </div>
+            <div class="theCon">
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input class="form-control" placeholder="请输入标题">
+                </div>
+                <div class="form-group">
+                    <label>描述文字</label>
+                    <input class="form-control" placeholder="请输入描述文字">
+                </div>
+                <div class="form-group">
+                    <h4>必填设置</h4>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT"> 必填
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT"> 非必填
+                    </label>
+                </div>
+                <div class="form-group">
+                    <h4>输入框大小</h4>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 小尺寸
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 标准尺寸
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 大尺寸
+                    </label>
+                </div>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> qq号
+                </label>
+            </div>
+            <div class="theCon">
+                <div class="form-group">
+                    <label>qq号</label>
+                    <input class="form-control" placeholder="请输入标题">
+                </div>
+                <div class="form-group">
+                    <label>描述文字</label>
+                    <input class="form-control" placeholder="请输入描述文字">
+                </div>
+                <div class="form-group">
+                    <h4>必填设置</h4>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT"> 必填
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT"> 非必填
+                    </label>
+                </div>
+                <div class="form-group">
+                    <h4>输入框大小</h4>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 小尺寸
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 标准尺寸
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 大尺寸
+                    </label>
+                </div>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> 微信号
+                </label>
+            </div>
+            <div class="theCon">
+                <div class="form-group">
+                    <label>微信号</label>
+                    <input class="form-control" placeholder="请输入标题">
+                </div>
+                <div class="form-group">
+                    <label>描述文字</label>
+                    <input class="form-control" placeholder="请输入描述文字">
+                </div>
+                <div class="form-group">
+                    <h4>必填设置</h4>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT"> 必填
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT"> 非必填
+                    </label>
+                </div>
+                <div class="form-group">
+                    <h4>输入框大小</h4>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 小尺寸
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 标准尺寸
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 大尺寸
+                    </label>
+                </div>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> 婚期
+                </label>
+            </div>
+            <div class="theCon">
+                <div class="form-group">
+                    <label>婚期</label>
+                    <input class="form-control" placeholder="请输入标题">
+                </div>
+                <div class="form-group">
+                    <label>描述文字</label>
+                    <input class="form-control" placeholder="请输入描述文字">
+                </div>
+                <div class="form-group">
+                    <h4>必填设置</h4>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT"> 必填
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT"> 非必填
+                    </label>
+                </div>
+                <div class="form-group">
+                    <h4>排列方式</h4>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 一列
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 两列
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 三列
+                    </label>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-
+<script src="js/tree.js"></script>
 <script src="js/homologous.js"></script>
+
 <script type="text/javascript" src="http://7xjeen.com5.z0.glb.qiniucdn.com/rs/js/head.load.min.js"></script>
 <script>
-    /*$('#myCarousel').carousel({
-        interval:2000
-    });*/
+    $(function(){
+        $('#myCarousel').carousel({
+            interval:2000
+        });
+    });
+
 </script>
 <script type="text/javascript">
 

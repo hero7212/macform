@@ -97,7 +97,7 @@ $(function(){
                 '<button class="close">&times;</button>'+
                 '<label>姓名</label>'+
                 '<h6>描述文字</h6>'+
-                '<input class="form-control" type="text" placeholder="请输入姓名" disabled>'+
+                '<input class="form-control" type="text" placeholder="请输入标题" disabled>'+
             '</div>',
         email='<div class="form-group field emailS">'+
                 '<button class="close">&times;</button>'+
@@ -176,9 +176,9 @@ $(function(){
         ;
 
     $('#handIn').click(function(){
-        $('#fields').append(handIn);
-        $('.con .hide').removeClass('hide');
-        $('#edit').html(nameTel+companyT+sexT+emailT+qqT+wechatT+marryT);
+        //$('#fields').append(handIn);
+        //$('.con .hide').removeClass('hide');
+        //$('#edit').html(nameTel+companyT+sexT+emailT+qqT+wechatT+marryT);
 
     });
 
@@ -201,6 +201,7 @@ $(function(){
 
     $('#share').click(function(){
         $('#fields').append(share);
+        //$('#edit').html(line);
     });
 
 
@@ -283,6 +284,7 @@ $(function(){
                     '<input class="form-control" placeholder="请输入描述文字">'+
                 '</div>'+
                 '<div class="form-group">'+
+                    '<h4>必填设置</h4>'+
                     '<label class="checkbox-inline">'+
                         '<input type="radio" name="nameT"> 必填'+
                     '</label>'+
@@ -290,130 +292,218 @@ $(function(){
                         '<input type="radio" name="nameT"> 非必填'+
                     '</label>'+
                 '</div>'+
+                '<div class="form-group">'+
+                    '<h4>输入框大小</h4>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="nameT2"> 小尺寸'+
+                    '</label>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="nameT2"> 标准尺寸'+
+                    '</label>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="nameT2"> 大尺寸'+
+                    '</label>'+
+                '</div>'+
             '</div>',
         telT='<div class="telT">'+
-            '<div class="form-group">'+
-            '<label>手机号码</label>'+
-            '<input class="form-control" placeholder="请输入标题">'+
-            '</div>'+
-            '<div class="form-group">'+
-            '<label>描述文字</label>'+
-            '<input class="form-control" placeholder="请输入描述文字">'+
-            '</div>'+
-            '<div class="form-group">'+
-            '<label class="checkbox-inline">'+
-            '<input type="radio" name="telT"> 必填'+
-            '</label>'+
-            '<label class="checkbox-inline">'+
-            '<input type="radio" name="telT"> 非必填'+
-            '</label>'+
-            '</div>'+
+                '<div class="form-group">'+
+                    '<label>手机号码</label>'+
+                    '<input class="form-control" placeholder="请输入标题">'+
+                '</div>'+
+                '<div class="form-group">'+
+                    '<label>描述文字</label>'+
+                    '<input class="form-control" placeholder="请输入描述文字">'+
+                '</div>'+
+                '<div class="form-group">'+
+                    '<h4>必填设置</h4>'+
+                    '<label class="checkbox-inline">'+
+                    '<input type="radio" name="telT"> 必填'+
+                    '</label>'+
+                    '<label class="checkbox-inline">'+
+                    '<input type="radio" name="telT"> 非必填'+
+                    '</label>'+
+                '</div>'+
+                '<div class="form-group">'+
+                    '<h4>输入框大小</h4>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="nameT2"> 小尺寸'+
+                    '</label>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="nameT2"> 标准尺寸'+
+                    '</label>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="nameT2"> 大尺寸'+
+                    '</label>'+
+                '</div>'+
             '</div>',
         companyT='<div class="companyT">'+
-            '<div class="form-group">'+
-            '<label>公司</label>'+
-            '<input class="form-control" placeholder="请输入标题">'+
-            '</div>'+
-            '<div class="form-group">'+
-            '<label>描述文字</label>'+
-            '<input class="form-control" placeholder="请输入描述文字">'+
-            '</div>'+
-            '<div class="form-group">'+
-            '<label class="checkbox-inline">'+
-            '<input type="radio" name="companyT"> 必填'+
-            '</label>'+
-            '<label class="checkbox-inline">'+
-            '<input type="radio" name="companyT"> 非必填'+
-            '</label>'+
-            '</div>'+
+                    '<div class="form-group">'+
+                        '<label>公司</label>'+
+                        '<input class="form-control" placeholder="请输入标题">'+
+                    '</div>'+
+                    '<div class="form-group">'+
+                        '<label>描述文字</label>'+
+                        '<input class="form-control" placeholder="请输入描述文字">'+
+                    '</div>'+
+                    '<div class="form-group">'+
+                        '<h4>必填设置</h4>'+
+                        '<label class="checkbox-inline">'+
+                            '<input type="radio" name="companyT"> 必填'+
+                        '</label>'+
+                        '<label class="checkbox-inline">'+
+                            '<input type="radio" name="companyT"> 非必填'+
+                        '</label>'+
+                    '</div>'+
+                    '<div class="form-group">'+
+                        '<h4>输入框大小</h4>'+
+                        '<label class="checkbox-inline">'+
+                            '<input type="radio" name="nameT2"> 小尺寸'+
+                        '</label>'+
+                        '<label class="checkbox-inline">'+
+                            '<input type="radio" name="nameT2"> 标准尺寸'+
+                        '</label>'+
+                        '<label class="checkbox-inline">'+
+                            '<input type="radio" name="nameT2"> 大尺寸'+
+                        '</label>'+
+                    '</div>'+
             '</div>',
         emailT='<div class="emailT">'+
-            '<div class="form-group">'+
-            '<label>电子邮件</label>'+
-            '<input class="form-control" placeholder="请输入标题">'+
-            '</div>'+
-            '<div class="form-group">'+
-            '<label>描述文字</label>'+
-            '<input class="form-control" placeholder="请输入描述文字">'+
-            '</div>'+
-            '<div class="form-group">'+
-            '<label class="checkbox-inline">'+
-            '<input type="radio" name="emailT"> 必填'+
-            '</label>'+
-            '<label class="checkbox-inline">'+
-            '<input type="radio" name="emailT"> 非必填'+
-            '</label>'+
-            '</div>'+
+                    '<div class="form-group">'+
+                        '<label>电子邮件</label>'+
+                        '<input class="form-control" placeholder="请输入标题">'+
+                    '</div>'+
+                    '<div class="form-group">'+
+                        '<label>描述文字</label>'+
+                        '<input class="form-control" placeholder="请输入描述文字">'+
+                    '</div>'+
+                    '<div class="form-group">'+
+                        '<h4>必填设置</h4>'+
+                        '<label class="checkbox-inline">'+
+                            '<input type="radio" name="emailT"> 必填'+
+                        '</label>'+
+                        '<label class="checkbox-inline">'+
+                            '<input type="radio" name="emailT"> 非必填'+
+                        '</label>'+
+                    '</div>'+
+                    '<div class="form-group">'+
+                        '<h4>输入框大小</h4>'+
+                        '<label class="checkbox-inline">'+
+                            '<input type="radio" name="nameT2"> 小尺寸'+
+                        '</label>'+
+                        '<label class="checkbox-inline">'+
+                            '<input type="radio" name="nameT2"> 标准尺寸'+
+                        '</label>'+
+                        '<label class="checkbox-inline">'+
+                            '<input type="radio" name="nameT2"> 大尺寸'+
+                        '</label>'+
+                    '</div>'+
             '</div>',
         qqT='<div class="qqT">'+
-            '<div class="form-group">'+
-            '<label>QQ</label>'+
-            '<input class="form-control" placeholder="请输入标题">'+
-            '</div>'+
-            '<div class="form-group">'+
-            '<label>描述文字</label>'+
-            '<input class="form-control" placeholder="请输入描述文字">'+
-            '</div>'+
-            '<div class="form-group">'+
-            '<label class="checkbox-inline">'+
-            '<input type="radio" name="QQT"> 必填'+
-            '</label>'+
-            '<label class="checkbox-inline">'+
-            '<input type="radio" name="QQT"> 非必填'+
-            '</label>'+
-            '</div>'+
+                '<div class="form-group">'+
+                    '<label>QQ</label>'+
+                    '<input class="form-control" placeholder="请输入标题">'+
+                '</div>'+
+                '<div class="form-group">'+
+                    '<label>描述文字</label>'+
+                    '<input class="form-control" placeholder="请输入描述文字">'+
+                '</div>'+
+                '<div class="form-group">'+
+                    '<h4>必填设置</h4>'+
+                    '<label class="checkbox-inline">'+
+                    '<input type="radio" name="QQT"> 必填'+
+                    '</label>'+
+                    '<label class="checkbox-inline">'+
+                    '<input type="radio" name="QQT"> 非必填'+
+                    '</label>'+
+                '</div>'+
+                '<div class="form-group">'+
+                    '<h4>输入框大小</h4>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="nameT2"> 小尺寸'+
+                    '</label>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="nameT2"> 标准尺寸'+
+                    '</label>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="nameT2"> 大尺寸'+
+                    '</label>'+
+                '</div>'+
             '</div>',
         wechatT='<div class="wechatT">'+
-            '<div class="form-group">'+
-            '<label>微信</label>'+
-            '<input class="form-control" placeholder="请输入标题">'+
-            '</div>'+
-            '<div class="form-group">'+
-            '<label>描述文字</label>'+
-            '<input class="form-control" placeholder="请输入描述文字">'+
-            '</div>'+
-            '<div class="form-group">'+
-            '<label class="checkbox-inline">'+
-            '<input type="radio" name="wechatT"> 必填'+
-            '</label>'+
-            '<label class="checkbox-inline">'+
-            '<input type="radio" name="wechatT"> 非必填'+
-            '</label>'+
-            '</div>'+
+                    '<div class="form-group">'+
+                        '<label>微信</label>'+
+                        '<input class="form-control" placeholder="请输入标题">'+
+                    '</div>'+
+                    '<div class="form-group">'+
+                        '<label>描述文字</label>'+
+                        '<input class="form-control" placeholder="请输入描述文字">'+
+                    '</div>'+
+                    '<div class="form-group">'+
+                        '<h4>必填设置</h4>'+
+                        '<label class="checkbox-inline">'+
+                            '<input type="radio" name="wechatT"> 必填'+
+                        '</label>'+
+                        '<label class="checkbox-inline">'+
+                            '<input type="radio" name="wechatT"> 非必填'+
+                        '</label>'+
+                    '</div>'+
             '</div>',
 
 
 
         sexT='<div class="sexT">'+
-                '<h5 style="font-weight: bolder">性别</h5>'+
                 '<div class="form-group">'+
+                    '<label>性别</label>'+
+                    '<input class="form-control" placeholder="请输入标题">'+
+                '</div>'+
+                '<div class="form-group">'+
+                    '<h4>必填设置</h4>'+
                     '<label class="checkbox-inline">'+
-                    '<input type="radio" name="sex"> 男'+
+                        '<input type="radio" name="sex"> 必填'+
                     '</label>'+
                     '<label class="checkbox-inline">'+
-                    '<input type="radio" name="sex"> 女'+
+                        '<input type="radio" name="sex"> 非必填'+
+                    '</label>'+
+                '</div>'+
+                '<div class="form-group">'+
+                    '<h4>排列方式</h4>'+
+                    '<label class="checkbox-inline">'+
+                    '<input type="radio" name="sex"> 一列'+
+                    '</label>'+
+                    '<label class="checkbox-inline">'+
+                    '<input type="radio" name="sex"> 二列'+
                     '</label>'+
                 '</div>'+
             '</div>',
         marryT='<div class="marryT">'+
-                '<h5 style="font-weight: bolder">婚期</h5>'+
-            '<div class="form-group">'+
-                '<h4>排列方式</h4>'+
-                '<label class="checkbox-inline">'+
-                '<input type="radio" name="marry"> 一列'+
-                '</label>'+
-                '<label class="checkbox-inline">'+
-                '<input type="radio" name="marry"> 两列'+
-                '</label>'+
-                '<label class="checkbox-inline">'+
-                '<input type="radio" name="marry"> 三列'+
-                '</label>'+
-                '<label class="checkbox-inline">'+
-                '<input type="radio" name="marry"> 四列'+
-                '</label>'+
-                '<h4 style="margin-top: 40px;">添加选项（最多添加4个）</h4>'+
-                '<input class="form-control" placeholder="请输入选项名称">'+
-            '</div>'+
+                    '<div class="form-group">'+
+                        '<label>婚期</label>'+
+                        '<input class="form-control" placeholder="请输入标题">'+
+                        '</div>'+
+                        '<div class="form-group">'+
+                        '<h4>必填设置</h4>'+
+                        '<label class="checkbox-inline">'+
+                        '<input type="radio" name="sex"> 必填'+
+                        '</label>'+
+                        '<label class="checkbox-inline">'+
+                        '<input type="radio" name="sex"> 非必填'+
+                        '</label>'+
+                    '</div>'+
+                    '<div class="form-group">'+
+                        '<h4>排列方式</h4>'+
+                        '<label class="checkbox-inline">'+
+                        '<input type="radio" name="marry"> 一列'+
+                        '</label>'+
+                        '<label class="checkbox-inline">'+
+                        '<input type="radio" name="marry"> 两列'+
+                        '</label>'+
+                        '<label class="checkbox-inline">'+
+                        '<input type="radio" name="marry"> 三列'+
+                        '</label>'+
+                        '<label class="checkbox-inline">'+
+                        '<input type="radio" name="marry"> 四列'+
+                        '</label>'+
+                    '</div>'+
             '</div>',
         img='<div class="form-group">'+
                 '<label>图片描述</label>'+
@@ -431,15 +521,18 @@ $(function(){
                 '<input type="radio" name="lign">右对齐'+
                 '</label>'+
             '</div>'+
-            '<div class="form-group">'+
+            '<div class="plusMinus"><i class="glyphicon glyphicon-plus plus"></i><i class="glyphicon glyphicon-minus minus"></i></div>'+
+            '<div class="form-group upLoad">'+
                 '<label>上传图片</label>'+
                 '<input class="form-control" type="file" placeholder="">'+
             '</div>',
         scroll='<div class="form-group">'+
                 '<h5>请选择上传的图片（最多五张）</h5>'+
+                '<div class="plusMinus"><i class="glyphicon glyphicon-plus plus2"></i><i class="glyphicon glyphicon-minus minus2"></i></div>'+
+                '<div class="form-group upLoad2">'+
                 '<label>上传图片</label>'+
                 '<input class="form-control" type="file" placeholder="">'+
-
+                '<div>'+
             '</div>',
         word='<div class="form-group">'+
             '<label>描述文字</label>'+
@@ -508,31 +601,37 @@ $(function(){
                     nameT+telT+
                 '</div>'
         ;
-    $('#edit').on('click','.companyT',function(){
-        $(this).remove();
+    $('#edit').one('click','.companyT',function(){
+        //$(this).remove();
         $('.groupT').append(companyT);
         $('.handIn').append(company);
     });
-    $('#edit').on('click','.emailT',function(){
-        $(this).remove();
+    $('#edit').one('click','.emailT',function(){
+        //$(this).remove();
         $('.groupT').append(emailT);
         $('.handIn').append(email);
     });
-    $('#edit').on('click','.qqT',function(){
-        $(this).remove();
+    $('#edit').one('click','.qqT',function(){
+        //$(this).remove();
         $('.groupT').append(qqT);
         $('.handIn').append(qq);
     });
-    $('#edit').on('click','.wechatT',function(){
-        $(this).remove();
+    $('#edit').one('click','.wechatT',function(){
+        //$(this).remove();
         $('.groupT').append(wechatT);
         $('.handIn').append(wechat);
     });
-    $('#edit').on('click','.sexT',function(){
-        $(this).remove();
+    $('#edit').one('click','.sexT',function(){
+        //$(this).remove();
         $('.groupT').append(sexT);
         $('.handIn').append(sex);
     });
+    $('#edit').one('click','.marryT',function(){
+        //$(this).remove();
+        $('.groupT').append(marryT);
+        $('.handIn').append(marry);
+    });
+
 
 
     $('.show').on('mouseenter','.nameS',function(){
@@ -579,8 +678,50 @@ $(function(){
     });
 
 
+    $('.groupT').on('click','input',function(e){
+        $(this).focus();
+    });
+
+    /*
+    $('#edit').one('mouseenter','.groupT',function(){
+        $(this).find('div').click(function(){
 
 
+        });
+    });
+
+    $('#edit').on('click','div',function(e){
+
+        //$(this).find('input').focus();
+        e.preventDefault();
+    });
+    */
+
+    $('#edit').on('click','.plus',function(){
+        if($('.upLoad').length<5){
+            $('#edit').append($('.upLoad').eq(0).clone());
+        }
+    });
+    $('#edit').on('click','.minus',function(){
+        if($('.upLoad').length>1){
+            $('.upLoad').eq(0).remove();
+        }
+    });
+
+    $('#edit').on('click','.plus2',function(){
+        if($('.upLoad2').length<5){
+            $('#edit').append($('.upLoad2').eq(0).clone());
+        }
+    });
+    $('#edit').on('click','.minus2',function(){
+        if($('.upLoad2').length>1){
+            $('.upLoad2').eq(0).remove();
+        }
+    });
+
+    $('#myCarousel').carousel({
+        interval:2000
+    });
 
 
 });
