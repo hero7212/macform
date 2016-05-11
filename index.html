@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <title>表单系统</title>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"/>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-wysiwyg.js"></script>
+    <script src="js/jquery.hotkeys.js"></script>
     <script type="text/javascript" src="http://7xjeen.com5.z0.glb.qiniucdn.com/rs/js/jquery-ui-1.8.24.custom.min.js"></script>
     <script type="text/javascript" src="http://7xjeen.com5.z0.glb.qiniucdn.com/rs/js/ajaxfileupload.js?v=20160419"></script>
     <script type="text/javascript" src="http://7xjeen.com5.z0.glb.qiniucdn.com/rs/js/utils.js?v=20160419"></script>
@@ -54,6 +57,7 @@
                 <label>标题</label>
                 <input class="form-control" placeholder="请输入标题">
             </div>
+            <!--
             <div class="form-group">
                 <label>标题字号大小</label>
                     <select name="" id="" class="form-control">
@@ -66,10 +70,12 @@
                         <option value="48">48</option>
                     </select>
             </div>
+            -->
             <div class="form-group">
                 <label>副标题</label>
                 <input class="form-control" placeholder="请输入副标题">
             </div>
+            <!--
             <div class="form-group">
                 <label>副标题字号大小</label>
                     <select name="" id="" class="form-control">
@@ -82,21 +88,24 @@
                         <option value="48">48</option>
                     </select>
             </div>
+            -->
+            <!--
             <div class="form-group">
                 <label>标题对齐方式</label>
-            <div class="radio">
-                <label class="radio-inline">
-                    <input type="radio" name="o"> 左对齐
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="o"> 右对齐
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="o" checked=""> 居中对齐
-                </label>
+                <div class="radio">
+                    <label class="radio-inline">
+                        <input type="radio" name="o"> 左对齐
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="o"> 右对齐
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="o" checked=""> 居中对齐
+                    </label>
+                </div>
             </div>
-            </div>
-            <h3>表单提交</h3>
+            -->
+            <!--<h3>表单提交</h3>-->
             <div class="form-group">
                 <label>表单提交后显示提示文字</label>
                 <input class="form-control" placeholder="请输入提示文字">
@@ -129,19 +138,19 @@
                 <input class="form-control" placeholder="请输入文字">
             </div>
             --><div class="form-group">
-            <label>反馈到达设置</label>
-            <div class="checkbox">
-                <label class="checkbox-block">
-                    <input type="checkbox"> 发送邮件通知
-                </label>
-                <label class="checkbox-block">
-                    <input type="checkbox"> 发送短信通知
-                </label>
-                <label class="checkbox-block">
-                    <input type="checkbox"> 发送微信通知
-                </label>
+                    <label>高级设置 <span class="caret"></span></label>
+                    <!--<div class="checkbox">
+                        <label class="checkbox-block">
+                            <input type="checkbox"> 发送邮件通知
+                        </label>
+                        <label class="checkbox-block">
+                            <input type="checkbox"> 发送短信通知
+                        </label>
+                        <label class="checkbox-block">
+                            <input type="checkbox"> 发送微信通知
+                        </label>
+                    </div>-->
             </div>
-        </div>
         </div>
 
         <div class="con" style="display: none;">
@@ -166,13 +175,14 @@
                 </button>
             </div>
             <!--公告组件-->
-            <div class="row">
+               <div class="row">
 
-                <button class="btn btn-default" id="notice">
-                    公告
-                </button>
+                   <button class="btn btn-default" id="notice">
+                       公告
+                   </button>
 
-            </div>
+               </div>
+
         </div>
             <hr class="clean" />
            <div class="formCon">
@@ -180,6 +190,14 @@
             <div class="row">
                 <button class="btn btn-warning" id="handIn">表单提交组件</button>
             </div>
+               <!--富文本-->
+               <div class="row">
+
+                   <button class="btn btn-danger" id="rich">
+                       富文本编辑器
+                   </button>
+
+               </div>
             <div class="row hide">
                 <button class="btn btn-default col-md-3" id="user" disabled>
                     姓名
@@ -261,8 +279,66 @@
             <div class="closeLine">
                 <button class="close">&times;</button>
             </div>
-            <div class="space" id="fields"></div>
 
+            <div class="space" id="fields">
+
+            </div>
+            <div class="room"></div>
+            <div class="rich">
+                <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
+                    <div class="btn-group">
+                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="" data-original-title="Font"><i class="icon-font"></i><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a data-edit="fontName Serif" style="font-family:'Serif'">Serif</a></li><li><a data-edit="fontName Sans" style="font-family:'Sans'">Sans</a></li><li><a data-edit="fontName Arial" style="font-family:'Arial'">Arial</a></li><li><a data-edit="fontName Arial Black" style="font-family:'Arial Black'">Arial Black</a></li><li><a data-edit="fontName Courier" style="font-family:'Courier'">Courier</a></li><li><a data-edit="fontName Courier New" style="font-family:'Courier New'">Courier New</a></li><li><a data-edit="fontName Comic Sans MS" style="font-family:'Comic Sans MS'">Comic Sans MS</a></li><li><a data-edit="fontName Helvetica" style="font-family:'Helvetica'">Helvetica</a></li><li><a data-edit="fontName Impact" style="font-family:'Impact'">Impact</a></li><li><a data-edit="fontName Lucida Grande" style="font-family:'Lucida Grande'">Lucida Grande</a></li><li><a data-edit="fontName Lucida Sans" style="font-family:'Lucida Sans'">Lucida Sans</a></li><li><a data-edit="fontName Tahoma" style="font-family:'Tahoma'">Tahoma</a></li><li><a data-edit="fontName Times" style="font-family:'Times'">Times</a></li><li><a data-edit="fontName Times New Roman" style="font-family:'Times New Roman'">Times New Roman</a></li><li><a data-edit="fontName Verdana" style="font-family:'Verdana'">Verdana</a></li></ul>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="" data-original-title="Font Size"><i class="icon-text-height"></i>&nbsp;<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a data-edit="fontSize 5"><font size="5">Huge</font></a></li>
+                            <li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li>
+                            <li><a data-edit="fontSize 1"><font size="1">Small</font></a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn" data-edit="bold" title="" data-original-title="Bold (Ctrl/Cmd+B)"><i class="icon-bold"></i></a>
+                        <a class="btn" data-edit="italic" title="" data-original-title="Italic (Ctrl/Cmd+I)"><i class="icon-italic"></i></a>
+                        <a class="btn" data-edit="strikethrough" title="" data-original-title="Strikethrough"><i class="icon-strikethrough"></i></a>
+                        <a class="btn" data-edit="underline" title="" data-original-title="Underline (Ctrl/Cmd+U)"><i class="icon-underline"></i></a>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn" data-edit="insertunorderedlist" title="" data-original-title="Bullet list"><i class="icon-list-ul"></i></a>
+                        <a class="btn" data-edit="insertorderedlist" title="" data-original-title="Number list"><i class="icon-list-ol"></i></a>
+                        <a class="btn" data-edit="outdent" title="" data-original-title="Reduce indent (Shift+Tab)"><i class="icon-indent-left"></i></a>
+                        <a class="btn" data-edit="indent" title="" data-original-title="Indent (Tab)"><i class="icon-indent-right"></i></a>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn" data-edit="justifyleft" title="" data-original-title="Align Left (Ctrl/Cmd+L)"><i class="icon-align-left"></i></a>
+                        <a class="btn" data-edit="justifycenter" title="" data-original-title="Center (Ctrl/Cmd+E)"><i class="icon-align-center"></i></a>
+                        <a class="btn" data-edit="justifyright" title="" data-original-title="Align Right (Ctrl/Cmd+R)"><i class="icon-align-right"></i></a>
+                        <a class="btn" data-edit="justifyfull" title="" data-original-title="Justify (Ctrl/Cmd+J)"><i class="icon-align-justify"></i></a>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="" data-original-title="Hyperlink"><i class="icon-link"></i></a>
+                        <div class="dropdown-menu input-append">
+                            <input class="span2" placeholder="URL" type="text" data-edit="createLink">
+                            <button class="btn" type="button">Add</button>
+                        </div>
+                        <a class="btn" data-edit="unlink" title="" data-original-title="Remove Hyperlink"><i class="icon-cut"></i></a>
+
+                    </div>
+
+                    <div class="btn-group">
+                        <a class="btn" title="" id="pictureBtn" data-original-title="Insert picture (or just drag &amp; drop)"><i class="icon-picture"></i></a>
+                        <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" style="opacity: 0; position: absolute; top: 0px; left: 0px; width: 41px; height: 30px;">
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn" data-edit="undo" title="" data-original-title="Undo (Ctrl/Cmd+Z)"><i class="icon-undo"></i></a>
+                        <a class="btn" data-edit="redo" title="" data-original-title="Redo (Ctrl/Cmd+Y)"><i class="icon-repeat"></i></a>
+                    </div>
+                    <input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech="" style="display: none;">
+                </div>
+                <div id="editor"></div>
+            </div>
         </div>
 
             <div class="btnBox">
@@ -297,10 +373,12 @@
                 <label>姓名</label>
                 <input class="form-control" placeholder="请输入标题">
                 </div>
+                <!--
                 <div class="form-group">
                 <label>描述文字</label>
                 <input class="form-control" placeholder="请输入描述文字">
                 </div>
+                -->
                 <div class="form-group">
                 <h4>必填设置</h4>
                 <label class="checkbox-inline">
@@ -335,10 +413,12 @@
                     <label>电话号码</label>
                     <input class="form-control" placeholder="请输入标题">
                 </div>
+                <!--
                 <div class="form-group">
                     <label>描述文字</label>
                     <input class="form-control" placeholder="请输入描述文字">
                 </div>
+                -->
                 <div class="form-group">
                     <h4>必填设置</h4>
                     <label class="checkbox-inline">
@@ -373,10 +453,12 @@
                     <label>公司名称</label>
                     <input class="form-control" placeholder="请输入标题">
                 </div>
+                <!--
                 <div class="form-group">
                     <label>描述文字</label>
                     <input class="form-control" placeholder="请输入描述文字">
                 </div>
+                -->
                 <div class="form-group">
                     <h4>必填设置</h4>
                     <label class="checkbox-inline">
@@ -440,10 +522,12 @@
                     <label>E-mail</label>
                     <input class="form-control" placeholder="请输入标题">
                 </div>
+                <!--
                 <div class="form-group">
                     <label>描述文字</label>
                     <input class="form-control" placeholder="请输入描述文字">
                 </div>
+                -->
                 <div class="form-group">
                     <h4>必填设置</h4>
                     <label class="checkbox-inline">
@@ -478,10 +562,12 @@
                     <label>qq号</label>
                     <input class="form-control" placeholder="请输入标题">
                 </div>
+                <!--
                 <div class="form-group">
                     <label>描述文字</label>
                     <input class="form-control" placeholder="请输入描述文字">
                 </div>
+                -->
                 <div class="form-group">
                     <h4>必填设置</h4>
                     <label class="checkbox-inline">
@@ -516,10 +602,12 @@
                     <label>微信号</label>
                     <input class="form-control" placeholder="请输入标题">
                 </div>
+                <!--
                 <div class="form-group">
                     <label>描述文字</label>
                     <input class="form-control" placeholder="请输入描述文字">
                 </div>
+                -->
                 <div class="form-group">
                     <h4>必填设置</h4>
                     <label class="checkbox-inline">
@@ -554,10 +642,12 @@
                     <label>婚期</label>
                     <input class="form-control" placeholder="请输入标题">
                 </div>
+                <!--
                 <div class="form-group">
                     <label>描述文字</label>
                     <input class="form-control" placeholder="请输入描述文字">
                 </div>
+                -->
                 <div class="form-group">
                     <h4>必填设置</h4>
                     <label class="checkbox-inline">
@@ -599,8 +689,9 @@
 
 <script type="text/javascript" src="http://7xjeen.com5.z0.glb.qiniucdn.com/rs/js/head.load.min.js"></script>
 <script>
-
     $(function(){
+        $('#editor').wysiwyg();
+
         $('#myCarousel').carousel({
             interval:2000
         });
@@ -633,3 +724,4 @@
 
 </body>
 </html>
+

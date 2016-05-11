@@ -167,6 +167,7 @@ $(function(){
                 '</div>'+
             '</div>'
 
+
         ;
 
     //var summit='<button class="btn btn-success">提交</button>';
@@ -179,72 +180,79 @@ $(function(){
         //$('#fields').append(handIn);
         //$('.con .hide').removeClass('hide');
         //$('#edit').html(nameTel+companyT+sexT+emailT+qqT+wechatT+marryT);
-
+        $('.trees>.checkbox').show();
+        $('.nameE input').trigger('click');
+        $('.telE input').trigger('click');
     });
 
 
     $('#checkbox').click(function(){
-        $('#fields').append(checkbox);
+        $('.room').append(checkbox);
     });
     $('#radio').click(function(){
-        $('#fields').append(radio);
+        $('.room').append(radio);
     });
     $('#select').click(function(){
-        $('#fields').append(select);
+        $('.room').append(select);
     });
     $('#date').click(function(){
-        $('#fields').append(date);
+        $('.room').append(date);
     });
     $('#time').click(function(){
-        $('#fields').append(time);
+        $('.room').append(time);
     });
 
     $('#share').click(function(){
-        $('#fields').append(share);
+        $('.room').append(share);
         //$('#edit').html(line);
     });
 
 
     $('#file').click(function(){
-        $('#fields').append(file);
+        $('.room').append(file);
     });
     $('#picture').click(function(){
-        $('#fields').append(picture);
+        $('.room').append(picture);
     });
     $('#banner').click(function(){
-        $('#fields').append(banner);
+        $('.room').append(banner);
     });
 
     $('#notice').click(function(){
-        $('#fields').append(notice);
+        $('.room').append(notice);
     });
 
     $('#user').click(function(){
-        $('#fields').append(user);
+        $('.room').append(user);
     });
     $('#sex').click(function(){
-        $('#fields').append(sex);
+        $('.room').append(sex);
     });
     $('#email').click(function(){
-        $('#fields').append(email);
+        $('.room').append(email);
     });
 
 
     $('#tel').click(function(){
-        $('#fields').append(tel);
+        $('.room').append(tel);
     });
     $('#company').click(function(){
-        $('#fields').append(company);
+        $('.room').append(company);
     });
     $('#qq').click(function(){
-        $('#fields').append(qq);
+        $('.room').append(qq);
     });
     $('#wechat').click(function(){
-        $('#fields').append(wechat);
+        $('.room').append(wechat);
     });
     $('#marry').click(function(){
-        $('#fields').append(marry);
+        $('.room').append(marry);
     });
+
+    $('#rich').click(function(){
+        $('.rich').toggle();
+    });
+
 
     $('.son').click(function(e){
         e.preventDefault();
@@ -256,7 +264,7 @@ $(function(){
     });
 
 
-    $('#fields').on('click','.form-group',function(){
+    $('.#fields').on('click','.form-group',function(){
         $(this).addClass('bg-warning').siblings('.form-group').removeClass('bg-warning');
         $('.con').eq(3).show().siblings('.con').hide();
         $('#tabs>ul>li').eq(3).addClass('active').siblings().removeClass('active');

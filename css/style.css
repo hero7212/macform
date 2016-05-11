@@ -75,6 +75,7 @@ h3 i{cursor: pointer;; color: #fff}
 
 .closeLine{
     padding-right: 15px;
+    margin-bottom: 40px;
     display: none;
 }
 
@@ -122,6 +123,10 @@ h3 i{cursor: pointer;; color: #fff}
 
 }
 
+.room{
+    padding: 0 15px !important;
+}
+
 .space{
     padding: 0 15px !important;
     overflow-y: auto;
@@ -161,11 +166,25 @@ hr.clean{ margin: 15px 0}
     overflow-y: auto;
 }
 
-.trees .theCon{
+.trees>.checkbox{
     display: none;
+}
+
+.trees>.theCon{
+    display: none ;
 }
 
 .trees h4{
     font-weight: 700;
     font-size: 14px;
 }
+
+.rich{
+    display: none;
+}
+
+#editor {
+    overflow:scroll;
+    height:300px;
+}
+

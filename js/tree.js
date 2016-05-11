@@ -6,19 +6,19 @@ $(function(){
     var c0='<div class="form-group field nameS">'+
             //'<button class="close">&times;</button>'+
             '<label>姓名</label>'+
-            '<h6>描述文字</h6>'+
+            //'<h6>描述文字</h6>'+
             '<input class="form-control" type="text" placeholder="请输入标题" disabled>'+
             '</div>',
         c1='<div class="form-group field telS">'+
             //'<button class="close">&times;</button>'+
             '<label>手机号码</label>'+
-            '<h6>描述文字</h6>'+
+            //'<h6>描述文字</h6>'+
             '<input class="form-control" type="tel" placeholder="请输入手机号码" disabled>'+
             '</div>',
         c2='<div class="form-group field companyS">'+
             //'<button class="close">&times;</button>'+
             '<label>公司</label>'+
-            '<h6>描述文字</h6>'+
+            //'<h6>描述文字</h6>'+
             '<input class="form-control" type="text" placeholder="请填写您的公司地址" disabled>'+
             '</div>',
         c3='<div class="form-group field sexS">'+
@@ -34,19 +34,19 @@ $(function(){
         c4='<div class="form-group field emailS">'+
             //'<button class="close">&times;</button>'+
             '<label>电子邮件</label>'+
-            '<h6>描述文字</h6>'+
+            //'<h6>描述文字</h6>'+
             '<input class="form-control" type="email" placeholder="请输入电子邮件" disabled>'+
             '</div>',
         c5='<div class="form-group field qqS">'+
             //'<button class="close">&times;</button>'+
             '<label>QQ</label>'+
-            '<h6>描述文字</h6>'+
+            //'<h6>描述文字</h6>'+
             '<input class="form-control" type="text" placeholder="请填写您的qq" disabled>'+
             '</div>',
         c6='<div class="form-group field wechatS">'+
             //'<button class="close">&times;</button>'+
             '<label>微信</label>'+
-            '<h6>描述文字</h6>'+
+            //'<h6>描述文字</h6>'+
             '<input class="form-control" type="text" placeholder="请填写您的qq" disabled>'+
             '</div>',
         c7='<div class="form-group field marryS">'+
