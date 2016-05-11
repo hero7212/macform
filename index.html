@@ -33,8 +33,22 @@
             <li class="">
               <a href="" class="son">样式设置</a>
             </li>
-          </ul>
+        </ul>
         <div class="con" style="display: block;">
+            <div class="styleChose">
+                <h3>样式选择</h3>
+                <ul class="nav nav-pills styleNav">
+                    <li class="active">
+                        <a class="style1">自动义样式</a>
+                    </li>
+                    <li class="">
+                        <a class="style2">今日头条样式</a>
+                    </li>
+                    <li class="">
+                        <a class="style3">微信样式</a>
+                    </li>
+                </ul>
+            </div>
             <h3>标题文字</h3>
             <div class="form-group">
                 <label>标题</label>
@@ -232,14 +246,22 @@
     </div>
     <div class="col-md-4 bg-danger" id="mobile">
         <div class="show">
+            <div class="title title1 ">
                 <h1 class="text-center">这里是标题</h1>
                 <h4>这里是副标题</h4>
-            <div id="fields">
-
             </div>
-
-
-            <div class="space"></div>
+            <div class="title title2 text-center">
+                <h2>这里是标题</h2>
+                <em class="text-muted">2016-05-10 运动笔记 <span class="text-primary">南京跑步</span></em>
+            </div>
+            <div class="title title3 text-center">
+                <h2>这里是标题</h2>
+                <em class="text-muted">05-10 12:32 头条新闻</em>
+            </div>
+            <div class="closeLine">
+                <button class="close">&times;</button>
+            </div>
+            <div class="space" id="fields"></div>
 
         </div>
 
@@ -265,7 +287,7 @@
             <p class="choose">请选择组件</p>
         </div>
         <div class="trees" id="edit">
-            <div class="checkbox">
+            <div class="checkbox nameE">
                 <label>
                     <input type="checkbox"> 姓名
                 </label>
@@ -288,20 +310,22 @@
                     <input type="radio" name="nameT"> 非必填
                     </label>
                 </div>
+                <!--
                 <div class="form-group">
-                <h4>输入框大小</h4>
-                <label class="checkbox-inline">
-                    <input type="radio" name="nameT2"> 小尺寸
+                    <h4>输入框大小</h4>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 小尺寸
+                        </label>
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 标准尺寸
                     </label>
-                <label class="checkbox-inline">
-                    <input type="radio" name="nameT2"> 标准尺寸
-                </label>
-                <label class="checkbox-inline">
-                    <input type="radio" name="nameT2"> 大尺寸
+                    <label class="checkbox-inline">
+                        <input type="radio" name="nameT2"> 大尺寸
                     </label>
                 </div>
+                -->
             </div>
-            <div class="checkbox">
+            <div class="checkbox telE">
                 <label>
                     <input type="checkbox"> 电话号码
                 </label>
@@ -318,12 +342,13 @@
                 <div class="form-group">
                     <h4>必填设置</h4>
                     <label class="checkbox-inline">
-                        <input type="radio" name="nameT"> 必填
+                        <input type="radio" name="telT"> 必填
                     </label>
                     <label class="checkbox-inline">
-                        <input type="radio" name="nameT"> 非必填
+                        <input type="radio" name="telT"> 非必填
                     </label>
                 </div>
+                <!--
                 <div class="form-group">
                     <h4>输入框大小</h4>
                     <label class="checkbox-inline">
@@ -336,8 +361,9 @@
                         <input type="radio" name="nameT2"> 大尺寸
                     </label>
                 </div>
+                -->
             </div>
-            <div class="checkbox">
+            <div class="checkbox companyE">
                 <label>
                     <input type="checkbox"> 公司名称
                 </label>
@@ -354,12 +380,13 @@
                 <div class="form-group">
                     <h4>必填设置</h4>
                     <label class="checkbox-inline">
-                        <input type="radio" name="nameT"> 必填
+                        <input type="radio" name="companyT"> 必填
                     </label>
                     <label class="checkbox-inline">
-                        <input type="radio" name="nameT"> 非必填
+                        <input type="radio" name="companyT"> 非必填
                     </label>
                 </div>
+                <!--
                 <div class="form-group">
                     <h4>输入框大小</h4>
                     <label class="checkbox-inline">
@@ -372,8 +399,9 @@
                         <input type="radio" name="nameT2"> 大尺寸
                     </label>
                 </div>
+                -->
             </div>
-            <div class="checkbox">
+            <div class="checkbox sexE">
                 <label>
                     <input type="checkbox"> 性别
                 </label>
@@ -386,23 +414,23 @@
                 <div class="form-group">
                     <h4>必填设置</h4>
                     <label class="checkbox-inline">
-                        <input type="radio" name="nameT"> 必填
+                        <input type="radio" name="sexT"> 必填
                     </label>
                     <label class="checkbox-inline">
-                        <input type="radio" name="nameT"> 非必填
+                        <input type="radio" name="sexT"> 非必填
                     </label>
                 </div>
                 <div class="form-group">
                     <h4>排列方式</h4>
                     <label class="checkbox-inline">
-                        <input type="radio" name="nameT2"> 一列
+                        <input type="radio" name="sexT2"> 一列
                     </label>
                     <label class="checkbox-inline">
-                        <input type="radio" name="nameT2"> 二列
+                        <input type="radio" name="sexT2"> 二列
                     </label>
                 </div>
             </div>
-            <div class="checkbox">
+            <div class="checkbox emailE">
                 <label>
                     <input type="checkbox"> E-mail
                 </label>
@@ -419,12 +447,13 @@
                 <div class="form-group">
                     <h4>必填设置</h4>
                     <label class="checkbox-inline">
-                        <input type="radio" name="nameT"> 必填
+                        <input type="radio" name="emailT"> 必填
                     </label>
                     <label class="checkbox-inline">
-                        <input type="radio" name="nameT"> 非必填
+                        <input type="radio" name="emailT"> 非必填
                     </label>
                 </div>
+                <!--
                 <div class="form-group">
                     <h4>输入框大小</h4>
                     <label class="checkbox-inline">
@@ -437,8 +466,9 @@
                         <input type="radio" name="nameT2"> 大尺寸
                     </label>
                 </div>
+                -->
             </div>
-            <div class="checkbox">
+            <div class="checkbox qqE">
                 <label>
                     <input type="checkbox"> qq号
                 </label>
@@ -455,12 +485,13 @@
                 <div class="form-group">
                     <h4>必填设置</h4>
                     <label class="checkbox-inline">
-                        <input type="radio" name="nameT"> 必填
+                        <input type="radio" name="qqT"> 必填
                     </label>
                     <label class="checkbox-inline">
-                        <input type="radio" name="nameT"> 非必填
+                        <input type="radio" name="qqT"> 非必填
                     </label>
                 </div>
+                <!--
                 <div class="form-group">
                     <h4>输入框大小</h4>
                     <label class="checkbox-inline">
@@ -473,8 +504,9 @@
                         <input type="radio" name="nameT2"> 大尺寸
                     </label>
                 </div>
+                -->
             </div>
-            <div class="checkbox">
+            <div class="checkbox wechatE">
                 <label>
                     <input type="checkbox"> 微信号
                 </label>
@@ -491,12 +523,13 @@
                 <div class="form-group">
                     <h4>必填设置</h4>
                     <label class="checkbox-inline">
-                        <input type="radio" name="nameT"> 必填
+                        <input type="radio" name="wxT"> 必填
                     </label>
                     <label class="checkbox-inline">
-                        <input type="radio" name="nameT"> 非必填
+                        <input type="radio" name="wxT"> 非必填
                     </label>
                 </div>
+                <!--
                 <div class="form-group">
                     <h4>输入框大小</h4>
                     <label class="checkbox-inline">
@@ -509,8 +542,9 @@
                         <input type="radio" name="nameT2"> 大尺寸
                     </label>
                 </div>
+                -->
             </div>
-            <div class="checkbox">
+            <div class="checkbox marryE">
                 <label>
                     <input type="checkbox"> 婚期
                 </label>
@@ -527,22 +561,31 @@
                 <div class="form-group">
                     <h4>必填设置</h4>
                     <label class="checkbox-inline">
-                        <input type="radio" name="nameT"> 必填
+                        <input type="radio" name="marryT"> 必填
                     </label>
                     <label class="checkbox-inline">
-                        <input type="radio" name="nameT"> 非必填
+                        <input type="radio" name="marryT"> 非必填
                     </label>
+                </div>
+                <div class="form-group cloneWrap">
+                    <h4>选项设置</h4>
+                    <p class="mustClone">
+                        <input type="radio"/>
+                        <input type="text" class="form-inline"/>
+                        <i class="glyphicon glyphicon-plus plus3"></i>
+                        <i class="glyphicon glyphicon-minus minus3"></i>
+                    </p>
                 </div>
                 <div class="form-group">
                     <h4>排列方式</h4>
                     <label class="checkbox-inline">
-                        <input type="radio" name="nameT2"> 一列
+                        <input type="radio" name="marryT2"> 两列
                     </label>
-                    <label class="checkbox-inline">
-                        <input type="radio" name="nameT2"> 两列
+                    <label class="checkbox-inline dum3">
+                        <input type="radio" name="marryT2"> 三列
                     </label>
-                    <label class="checkbox-inline">
-                        <input type="radio" name="nameT2"> 三列
+                    <label class="checkbox-inline dum4">
+                        <input type="radio" name="marryT2"> 四列
                     </label>
                 </div>
             </div>
@@ -550,11 +593,13 @@
     </div>
 </div>
 
+<script src="js/styleNav.js"></script>
 <script src="js/tree.js"></script>
 <script src="js/homologous.js"></script>
 
 <script type="text/javascript" src="http://7xjeen.com5.z0.glb.qiniucdn.com/rs/js/head.load.min.js"></script>
 <script>
+
     $(function(){
         $('#myCarousel').carousel({
             interval:2000

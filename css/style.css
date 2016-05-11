@@ -35,6 +35,32 @@ h3 i{cursor: pointer;; color: #fff}
     display: none;
 }
 
+.styleChose{
+    padding-bottom:5px ;
+    border-bottom: 1px dashed #c0c0c0;
+    margin-bottom: 10px;
+}
+
+.styleNav{
+    margin-bottom: 10px;
+}
+
+.styleNav li{
+    cursor: pointer;
+}
+
+.title{
+    display: none;
+}
+
+.title em{
+    font-style: normal;
+}
+
+.title1{
+    display: block;
+}
+
 .formLabel{
     margin-top:6px;
 }
@@ -45,6 +71,19 @@ h3 i{cursor: pointer;; color: #fff}
     font-size: 14px;
     padding: 20px;
     border:1px dashed #c0c0c0;
+}
+
+.closeLine{
+    padding-right: 15px;
+    display: none;
+}
+
+.dum3{
+    display: none;
+}
+
+.dum4{
+    display: none;
 }
 
 #fields{
@@ -84,8 +123,8 @@ h3 i{cursor: pointer;; color: #fff}
 }
 
 .space{
-    padding: 0 15px;
-    overflow-y: scroll;
+    padding: 0 15px !important;
+    overflow-y: auto;
 }
 
 .groupT>div{
@@ -97,6 +136,9 @@ h3 i{cursor: pointer;; color: #fff}
 }
 #edit>div.con{
     border-bottom:1px solid #ccc;
+}
+#edit>div.checkbox{
+    border-bottom: 0;
 }
 
 .plusMinus{
@@ -116,9 +158,14 @@ hr.clean{ margin: 15px 0}
 .chosen{
     background: white;
     height: 718px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .trees .theCon{
     display: none;
+}
+
+.trees h4{
+    font-weight: 700;
+    font-size: 14px;
 }
