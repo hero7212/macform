@@ -41,6 +41,10 @@ h3 i{cursor: pointer;; color: #fff}
     margin-bottom: 10px;
 }
 
+.jsCode{
+    display: none;
+}
+
 .styleNav{
     margin-bottom: 10px;
 }
@@ -73,6 +77,22 @@ h3 i{cursor: pointer;; color: #fff}
     border:1px dashed #c0c0c0;
 }
 
+.closeLine2{
+    padding-right: 15px;
+    /*display: none;*/
+    height: 20px;
+}
+
+.close2{
+    position: relative;
+    z-index: 9999;
+}
+
+.close{
+    position: relative;
+    z-index: 99999;
+}
+
 .closeLine{
     padding-right: 15px;
     margin-bottom: 40px;
@@ -88,11 +108,11 @@ h3 i{cursor: pointer;; color: #fff}
 }
 
 #fields{
-    padding: 0;
+
 }
 
 .banner{
-    /*display: flex;*/
+
 }
 
 .banner>img{
@@ -128,7 +148,7 @@ h3 i{cursor: pointer;; color: #fff}
 }
 
 .space{
-    padding: 0 15px !important;
+
     overflow-y: auto;
 }
 
@@ -167,7 +187,7 @@ hr.clean{ margin: 15px 0}
 }
 
 .trees>.checkbox{
-    display: none;
+    /*display: none;*/
 }
 
 .trees>.theCon{
@@ -180,7 +200,7 @@ hr.clean{ margin: 15px 0}
 }
 
 .rich{
-    display: none;
+    padding-top:10px;
 }
 
 #editor {

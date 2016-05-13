@@ -1,46 +1,19 @@
-/**
- * Created by hg on 2016/5/5.
- */
+
 $(function(){
+    $('.son').click(function(e){
+        e.preventDefault();
+    });
+    $('#tabs>ul>li').click(function(){
+        var _index=$(this).index();
+        $('.con').eq(_index).show().siblings('.con').hide();
+        $(this).addClass('active').siblings().removeClass('active');
+    });
 
-    var
-        checkbox='<div class="form-group field">'+
-                    '<button class="close">&times;</button>'+
-                    '<h5>多选框</h5>'+
-                    '<label class="checkbox-inline">'+
-                    '<input type="checkbox" disabled> 体育'+
-                    '</label>'+
-                    '<label class="checkbox-inline disabled">'+
-                    '<input type="checkbox" disabled> 音乐'+
-                    '</label>'+
-                '</div>',
-        radio='<div class="form-group field">'+
-                    '<button class="close">&times;</button>'+
-                    '<h5>单选框</h5>'+
-                    '<label class="checkbox-inline">'+
-                    '<input type="radio" name="only" disabled> 男'+
-                    '</label>'+
-                    '<label class="checkbox-inline disabled">'+
-                    '<input type="radio" name="only" disabled> 女'+
-                    '</label>'+
-            '</div>',
-        select='<div class="form-group field">'+
-                    '<button class="close">&times;</button>'+
-                    '<label>下拉框</label>'+
-                    '<select class="form-control" disabled></select>'+
-            '</div>',
-        date='<div class="form-group field">'+
-                '<button class="close">&times;</button>'+
-                '<label>日期</label>'+
-                '<input class="form-control" type="date" placeholder="请选择日期" disabled>'+
-            '</div>',
-        time='<div class="form-group field">'+
-                '<button class="close">&times;</button>'+
-                '<label>时间</label>'+
-                '<input class="form-control" type="time" placeholder="请选择时间" disabled>'+
-            '</div>',
+    $('#hard').click(function(){
+        $('.jsCode').toggle();
+    });
 
-        share='<div class="field share">'+
+    var share='<div class="element share">'+
                 '<button class="close">&times;</button>'+
                 '<p class="text-black">分割线</p>'+
                 '<hr/>'+
@@ -48,20 +21,18 @@ $(function(){
             '</div>'
         ,
 
-
-
-        file='<div class="form-group field">'+
+        file='<div class="form-group element">'+
                 '<button class="close">&times;</button>'+
                 '<label>文件上传</label>'+
                 '<input class="form-control" type="file" placeholder="请选择文件" disabled>'+
             '</div>',
-        picture='<div class="form-group field img">'+
+        picture='<div class="form-group element img">'+
                 '<button class="close">&times;</button>'+
                 '<label>图片</label>'+
                 '<img src="http://www.mikecrm.com/images/icon/formDefaultPicture.png" style="width: 100%;">'+
                 '<h6>描述文字</h6>'+
             '</div>',
-        banner='<div class="field banner">'+
+        banner='<div class="element banner">'+
                     '<button class="close" style="position: relative;z-index: 999999">&times;</button>'+
                     '<div id="myCarousel" class="carousel slide">'+
                         '<ol class="carousel-indicators">'+
@@ -84,14 +55,87 @@ $(function(){
                 '</div>'
         ,
 
-        notice='<div class="field notice">'+
-                '<i class="glyphicon glyphicon-volume-up"></i>'+
+        notice='<div class="element notice">'+
+
             '<button class="close">&times;</button>'+
             '<marquee class="bg-warning" style="color:#414141;font-size:12px;line-height:17px;" direction="left" height="18" scrollamount="5"   behavior="scroll"       scrolldelay="100" onMouseOver="this.scrollDelay=500" onMouseOut="this.scrollDelay=1" width="100%">'+
         '模板无忧（mb5u.com）专业提供各类编程源代码、电子视频教程、JavaScript/CSS特效代码以及常用软件下载等，做有质量的学习型源码下载站'+
                 '</marquee>'+
                 '</div>'
                 ,
+        rich='<div class="element rich">'+
+                '<div class="closeLine2">'+
+                    '<botton class="close close2">&times;</botton>'+
+                '</div>'+
+                '<div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">'+
+                    '<div class="btn-group">'+
+                        '<a class="btn dropdown-toggle" data-toggle="dropdown" title="" data-original-title="Font"><i class="icon-font"></i><b class="caret"></b></a>'+
+                        '<ul class="dropdown-menu">'+
+                            '<li><a data-edit="fontName Serif">Serif</a></li>' +
+                            '<li><a data-edit="fontName Sans">Sans</a></li>' +
+                            '<li><a data-edit="fontName Arial">Arial</a></li>' +
+                            '<li><a data-edit="fontName Arial Black">Arial Black</a></li>' +
+                            '<li><a data-edit="fontName Courier">Courier</a></li>' +
+                            '<li><a data-edit="fontName Courier New">Courier New</a></li>' +
+                            '<li><a data-edit="fontName Comic Sans MS">Comic Sans MS</a></li>' +
+                            '<li><a data-edit="fontName Helvetica">Helvetica</a></li>' +
+                            '<li><a data-edit="fontName Impact">Impact</a></li>' +
+                            '<li><a data-edit="fontName Lucida Grande">Lucida Grande</a></li>' +
+                            '<li><a data-edit="fontName Lucida Sans">Lucida Sans</a></li>' +
+                            '<li><a data-edit="fontName Tahoma">Tahoma</a></li>' +
+                            '<li><a data-edit="fontName Times">Times</a></li>' +
+                            '<li><a data-edit="fontName Times New Roman">Times New Roman</a></li>' +
+                            '<li><a data-edit="fontName Verdana">Verdana</a></li>' +
+                        '</ul>'+
+                    '</div>'+
+                    '<div class="btn-group">'+
+                        '<a class="btn dropdown-toggle" data-toggle="dropdown" title="" data-original-title="Font Size"><i class="icon-text-height"></i>&nbsp;<b class="caret"></b></a>'+
+                        '<ul class="dropdown-menu">'+
+                            '<li><a data-edit="fontSize 5"><font size="5">Huge</font></a></li>'+
+                            '<li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li>'+
+                            '<li><a data-edit="fontSize 1"><font size="1">Small</font></a></li>'+
+                        '</ul>'+
+                    '</div>'+
+                    '<div class="btn-group">'+
+                        '<a class="btn" data-edit="bold" title="" data-original-title="Bold (Ctrl/Cmd+B)"><i class="icon-bold"></i></a>'+
+                        '<a class="btn" data-edit="italic" title="" data-original-title="Italic (Ctrl/Cmd+I)"><i class="icon-italic"></i></a>'+
+                        '<a class="btn" data-edit="strikethrough" title="" data-original-title="Strikethrough"><i class="icon-strikethrough"></i></a>'+
+                        '<a class="btn" data-edit="underline" title="" data-original-title="Underline (Ctrl/Cmd+U)"><i class="icon-underline"></i></a>'+
+                    '</div>'+
+                    '<div class="btn-group">'+
+                        '<a class="btn" data-edit="insertunorderedlist" title="" data-original-title="Bullet list"><i class="icon-list-ul"></i></a>'+
+                        '<a class="btn" data-edit="insertorderedlist" title="" data-original-title="Number list"><i class="icon-list-ol"></i></a>'+
+                        '<a class="btn" data-edit="outdent" title="" data-original-title="Reduce indent (Shift+Tab)"><i class="icon-indent-left"></i></a>'+
+                        '<a class="btn" data-edit="indent" title="" data-original-title="Indent (Tab)"><i class="icon-indent-right"></i></a>'+
+                    '</div>'+
+                    '<div class="btn-group">'+
+                        '<a class="btn" data-edit="justifyleft" title="" data-original-title="Align Left (Ctrl/Cmd+L)"><i class="icon-align-left"></i></a>'+
+                        '<a class="btn" data-edit="justifycenter" title="" data-original-title="Center (Ctrl/Cmd+E)"><i class="icon-align-center"></i></a>'+
+                        '<a class="btn" data-edit="justifyright" title="" data-original-title="Align Right (Ctrl/Cmd+R)"><i class="icon-align-right"></i></a>'+
+                        '<a class="btn" data-edit="justifyfull" title="" data-original-title="Justify (Ctrl/Cmd+J)"><i class="icon-align-justify"></i></a>'+
+                    '</div>'+
+                    '<div class="btn-group">'+
+                        '<a class="btn dropdown-toggle" data-toggle="dropdown" title="" data-original-title="Hyperlink"><i class="icon-link"></i></a>'+
+                        '<div class="dropdown-menu input-append">'+
+                            '<input class="span2" placeholder="URL" type="text" data-edit="createLink">'+
+                            '<button class="btn" type="button">Add</button>'+
+                        '</div>'+
+                        '<a class="btn" data-edit="unlink" title="" data-original-title="Remove Hyperlink"><i class="icon-cut"></i></a>'+
+
+                    '</div>'+
+
+                    '<div class="btn-group">'+
+                        '<a class="btn" title="" id="pictureBtn" data-original-title="Insert picture (or just drag &amp; drop)"><i class="icon-picture"></i></a>'+
+                            '<input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" style="opacity: 0; position: absolute; top: 0px; left: 0px; width: 41px; height: 30px;">'+
+                    '</div>'+
+                    '<div class="btn-group">'+
+                        '<a class="btn" data-edit="undo" title="" data-original-title="Undo (Ctrl/Cmd+Z)"><i class="icon-undo"></i></a>'+
+                        '<a class="btn" data-edit="redo" title="" data-original-title="Redo (Ctrl/Cmd+Y)"><i class="icon-repeat"></i></a>'+
+                    '</div>'+
+                    '<input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech="" style="display: none;">'+
+                '</div>'+
+                '<div id="editor"></div>'+
+            '</div>',
 
         user='<div class="form-group field nameS">'+
                 '<button class="close">&times;</button>'+
@@ -166,45 +210,11 @@ $(function(){
                     '</div>'+
                 '</div>'+
             '</div>'
-
-
         ;
 
-    //var summit='<button class="btn btn-success">提交</button>';
-    var handIn='<div class="handIn field bg-warning">'+
-        user+tel+
-        '</div>'
-        ;
-
-    $('#handIn').click(function(){
-        //$('#fields').append(handIn);
-        //$('.con .hide').removeClass('hide');
-        //$('#edit').html(nameTel+companyT+sexT+emailT+qqT+wechatT+marryT);
-        $('.trees>.checkbox').show();
-        $('.nameE input').trigger('click');
-        $('.telE input').trigger('click');
-    });
-
-
-    $('#checkbox').click(function(){
-        $('.room').append(checkbox);
-    });
-    $('#radio').click(function(){
-        $('.room').append(radio);
-    });
-    $('#select').click(function(){
-        $('.room').append(select);
-    });
-    $('#date').click(function(){
-        $('.room').append(date);
-    });
-    $('#time').click(function(){
-        $('.room').append(time);
-    });
 
     $('#share').click(function(){
         $('.room').append(share);
-        //$('#edit').html(line);
     });
 
 
@@ -250,36 +260,8 @@ $(function(){
     });
 
     $('#rich').click(function(){
-        $('.rich').toggle();
+        $('.show').append(rich);
     });
-
-
-    $('.son').click(function(e){
-        e.preventDefault();
-    });
-    $('#tabs>ul>li').click(function(){
-        var _index=$(this).index();
-        $('.con').eq(_index).show().siblings('.con').hide();
-        $(this).addClass('active').siblings().removeClass('active');
-    });
-
-
-    $('.#fields').on('click','.form-group',function(){
-        $(this).addClass('bg-warning').siblings('.form-group').removeClass('bg-warning');
-        $('.con').eq(3).show().siblings('.con').hide();
-        $('#tabs>ul>li').eq(3).addClass('active').siblings().removeClass('active');
-        $('.choose').hide();
-    });
-
-    $('#fields').on('mouseenter','.form-group',function() {
-        $(this).find('.close').toggle();
-
-    });
-    $('#fields').on('click','.close',function(){
-        $(this).parent().remove();
-        return false;
-    });
-
 
 
     var nameT='<div class="nameT">'+
@@ -514,7 +496,7 @@ $(function(){
                     '</div>'+
             '</div>',
         img='<div class="form-group">'+
-                '<label>图片描述</label>'+
+                '<label>描述文字</label>'+
                 '<input class="form-control" placeholder="请输入对图片的描述">'+
             '</div>'+
             '<div class="form-group">'+
@@ -540,12 +522,40 @@ $(function(){
                 '<div class="form-group upLoad2">'+
                 '<label>上传图片</label>'+
                 '<input class="form-control" type="file" placeholder="">'+
-                '<div>'+
+                '</div>'+
+                '<div class="form-group disc">'+
+                    '<h4>是否显示轮播点</h4>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="disc">显示'+
+                    '</label>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="disc">不显示'+
+                    '</label>'+
+                '</div>'+
             '</div>',
         word='<div class="form-group">'+
-            '<label>描述文字</label>'+
-            '<input class="form-control" placeholder="请输入描述文字">'+
-            '</div>',
+                '<h4>效果选择</h4>'+
+                '<label class="checkbox-inline">'+
+                '<input type="radio" name="dir">显示'+
+                '</label>'+
+                '<label class="checkbox-inline">'+
+                '<input type="radio" name="dir">不显示'+
+                '</label>'+
+            '</div>'+
+            '<div class="form-group">'+
+                '<label>描述文字</label>'+
+                '<input class="form-control" placeholder="请输入描述文字">'+
+            '</div>'+
+            '<div class="form-group">'+
+                '<label>字体颜色设置</label>'+
+                '<input class="form-control" type="color">'+
+            '</div>'+
+            '<div class="form-group">'+
+                '<label>背景颜色设置</label>'+
+                '<input class="form-control" type="color">'+
+            '</div>'
+        ,
+
         line='<div class="form-group">'+
             '<label>标题</label>'+
             '<input class="form-control" placeholder="请输入标题">'+
@@ -583,28 +593,28 @@ $(function(){
 
 
 
-    $('#fields').on('click','.text',function(){
+    $('#content').on('click','.text',function(){
         $('#edit').html(text);
     });
-    $('#fields').on('click','.sexT',function(){
+    $('#content').on('click','.sexT',function(){
         $('#edit').html(sexT);
     });
-    $('#fields').on('click','.marryT',function(){
+    $('#content').on('click','.marryT',function(){
         $('#edit').html(marryT);
     });
-    $('#fields').on('click','.img',function(){
+    $('#content').on('click','.img',function(){
         $('#edit').html(img);
     });
-    $('#fields').on('click','.banner',function(){
+    $('#content').on('click','.banner',function(){
         $('#edit').html(scroll);
     });
-    $('#fields').on('click','.notice',function(){
+    $('#content').on('click','.notice',function(){
         $('#edit').html(word);
     });
-    $('#fields').on('click','.share',function(){
+    $('#content').on('click','.share',function(){
         $('#edit').html(line);
     });
-
+    /*
     var nameTel='<div class="groupT bg-danger">'+
                     nameT+telT+
                 '</div>'
@@ -620,7 +630,6 @@ $(function(){
         $('.handIn').append(email);
     });
     $('#edit').one('click','.qqT',function(){
-        //$(this).remove();
         $('.groupT').append(qqT);
         $('.handIn').append(qq);
     });
@@ -630,80 +639,22 @@ $(function(){
         $('.handIn').append(wechat);
     });
     $('#edit').one('click','.sexT',function(){
-        //$(this).remove();
         $('.groupT').append(sexT);
         $('.handIn').append(sex);
     });
     $('#edit').one('click','.marryT',function(){
-        //$(this).remove();
         $('.groupT').append(marryT);
         $('.handIn').append(marry);
     });
-
-
-
-    $('.show').on('mouseenter','.nameS',function(){
-        $(this).find('.close').click(function(){
-            $('.groupT .nameT').remove();
-            //$('#edit').append(nameT);
-        });
-    });
-    $('.show').on('mouseenter','.telS',function(){
-        $(this).find('.close').click(function(){
-            $('.groupT .telT').remove();
-            //$('#edit').append(telT);
-        });
-    });
-    $('.show').on('mouseenter','.companyS',function(){
-        $(this).find('.close').click(function(){
-            $('.groupT .companyT').remove();
-            //$('#edit').append(companyT);
-        });
-    });
-    $('.show').on('mouseenter','.emailS',function(){
-        $(this).find('.close').click(function(e){
-            $('.groupT .emailT').remove();
-            //$('#edit').append(emailT);
-        });
-    });
-    $('.show').on('mouseenter','.qqS',function(){
-        $(this).find('.close').click(function(){
-            $('.groupT .qqT').remove();
-            //$('#edit').append(qqT);
-        });
-    });
-    $('.show').on('mouseenter','.wechatS',function(){
-        $(this).find('.close').click(function(){
-            $('.groupT .wechatT').remove();
-            //$('#edit').append(wechatT);
-        });
-    });
-    $('.show').on('mouseenter','.sexS',function(){
-        $(this).find('.close').click(function(){
-            $('.groupT .sexT').remove();
-            //$('#edit').append(wechatT);
-        });
-    });
-
-
-    $('.groupT').on('click','input',function(e){
-        $(this).focus();
-    });
-
-    /*
-    $('#edit').one('mouseenter','.groupT',function(){
-        $(this).find('div').click(function(){
-
-
-        });
-    });
-
-    $('#edit').on('click','div',function(e){
-
-        //$(this).find('input').focus();
-        e.preventDefault();
-    });
     */
+
+
+
+
+
+
+
+
 
     $('#edit').on('click','.plus',function(){
         if($('.upLoad').length<5){
@@ -727,9 +678,255 @@ $(function(){
         }
     });
 
+    $('.show').on('click','.close2',function(){
+        $('.rich').remove();
+        $('.trees').empty();
+
+    });
+
+
+    var Html='<div class="checkbox nameE">'+
+                '<label>'+
+                    '<input type="checkbox"> 姓名'+
+                '</label>'+
+             '</div>'+
+             '<div class="theCon">'+
+                '<div class="form-group">'+
+                    '<label>姓名</label>'+
+                    '<input class="form-control" placeholder="请输入标题">'+
+                '</div>'+
+                '<div class="form-group">'+
+                    '<h4>必填设置</h4>'+
+                        '<label class="checkbox-inline">'+
+                            '<input type="radio" name="nameT"> 必填'+
+                        '</label>'+
+                        '<label class="checkbox-inline">'+
+                            '<input type="radio" name="nameT"> 非必填'+
+                        '</label>'+
+                '</div>'+
+             '</div>'+
+             '<div class="checkbox telE">'+
+                '<label>'+
+                    '<input type="checkbox"> 电话号码'+
+                '</label>'+
+             '</div>'+
+             '<div class="theCon">'+
+                '<div class="form-group">'+
+                    '<label>电话号码</label>'+
+                    '<input class="form-control" placeholder="请输入标题">'+
+                '</div>'+
+                 '<div class="form-group">'+
+                    '<h4>必填设置</h4>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="telT"> 必填'+
+                    '</label>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="telT"> 非必填'+
+                    '</label>'+
+                 '</div>'+
+             '</div>'+
+            '<div class="checkbox companyE">'+
+                '<label>'+
+                    '<input type="checkbox"> 公司名称'+
+                '</label>'+
+            '</div>'+
+            '<div class="theCon">'+
+                '<div class="form-group">'+
+                '<label>公司名称</label>'+
+                '<input class="form-control" placeholder="请输入标题">'+
+                '</div>'+
+
+                '<div class="form-group">'+
+                    '<h4>必填设置</h4>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="companyT"> 必填'+
+                    '</label>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="companyT"> 非必填'+
+                    '</label>'+
+                '</div>'+
+
+            '</div>'+
+            '<div class="checkbox sexE">'+
+                '<label>'+
+                    '<input type="checkbox"> 性别'+
+                '</label>'+
+            '</div>'+
+            '<div class="theCon">'+
+                '<div class="form-group">'+
+                    '<label>性别</label>'+
+                '<input class="form-control" placeholder="请输入标题">'+
+                '</div>'+
+                '<div class="form-group">'+
+                    '<h4>必填设置</h4>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="sexT"> 必填'+
+                    '</label>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="sexT"> 非必填'+
+                    '</label>'+
+                '</div>'+
+                '<div class="form-group">'+
+                    '<h4>排列方式</h4>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="sexT2"> 一列'+
+                    '</label>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="sexT2"> 二列'+
+                    '</label>'+
+                '</div>'+
+            '</div>'+
+            '<div class="checkbox emailE">'+
+                '<label>'+
+                    '<input type="checkbox"> E-mail'+
+                '</label>'+
+            '</div>'+
+            '<div class="theCon">'+
+                '<div class="form-group">;'+
+                    '<label>E-mail</label>'+
+                    '<input class="form-control" placeholder="请输入标题">'+
+                '</div>'+
+
+                '<div class="form-group">'+
+                    '<h4>必填设置</h4>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="emailT"> 必填'+
+                    '</label>'+
+                    '<label class="checkbox-inline">'+
+                        '<input type="radio" name="emailT"> 非必填'+
+                    '</label>'+
+                '</div>'+
+
+            '</div>'+
+        '<div class="checkbox qqE">'+
+        '<label>'+
+        '<input type="checkbox"> qq号'+
+        '</label>'+
+        '</div>'+
+        '<div class="theCon">'+
+        '<div class="form-group">'+
+        '<label>qq号</label>'+
+        '<input class="form-control" placeholder="请输入标题">'+
+        '</div>'+
+        '<div class="form-group">'+
+        '<h4>必填设置</h4>'+
+        '<label class="checkbox-inline">'+
+        '<input type="radio" name="qqT"> 必填'+
+        '</label>'+
+        '<label class="checkbox-inline">'+
+        '<input type="radio" name="qqT"> 非必填'+
+        '</label>'+
+        '</div>'+
+        '</div>'+
+        '<div class="checkbox wechatE">'+
+        '<label>'+
+        '<input type="checkbox"> 微信号'+
+        '</label>'+
+        '</div>'+
+        '<div class="theCon">'+
+        '<div class="form-group">'+
+        '<label>微信号</label>'+
+        '<input class="form-control" placeholder="请输入标题">'+
+        '</div>'+
+        '<div class="form-group">'+
+        '<h4>必填设置</h4>'+
+        '<label class="checkbox-inline">'+
+        '<input type="radio" name="wxT"> 必填'+
+        '</label>'+
+        '<label class="checkbox-inline">'+
+        '<input type="radio" name="wxT"> 非必填'+
+        '</label>'+
+        '</div>'+
+        '</div>'+
+        '<div class="checkbox marryE">'+
+        '<label>'+
+        '<input type="checkbox"> 婚期'+
+        '</label>'+
+        '</div>'+
+        '<div class="theCon">'+
+        '<div class="form-group">'+
+        '<label>婚期</label>'+
+        '<input class="form-control" placeholder="请输入标题">'+
+        '</div>'+
+        '<div class="form-group">'+
+        '<h4>必填设置</h4>'+
+        '<label class="checkbox-inline">'+
+        '<input type="radio" name="marryT"> 必填'+
+        '</label>'+
+        '<label class="checkbox-inline">'+
+        '<input type="radio" name="marryT"> 非必填'+
+        '</label>'+
+        '</div>'+
+        '<div class="form-group cloneWrap">'+
+        '<h4>选项设置</h4>'+
+        '<p class="mustClone">'+
+        '<input type="radio"/>'+
+        '<input type="text" class="form-inline"/>'+
+        '<i class="glyphicon glyphicon-plus plus3"></i>'+
+        '<i class="glyphicon glyphicon-minus minus3"></i>'+
+        '</p>'+
+        '</div>'+
+        '<div class="form-group">'+
+        '<h4>排列方式</h4>'+
+        '<label class="checkbox-inline">'+
+        '<input type="radio" name="marryT2"> 两列'+
+        '</label>'+
+        '<label class="checkbox-inline dum3">'+
+        '<input type="radio" name="marryT2"> 三列'+
+        '</label>'+
+        '<label class="checkbox-inline dum4">'+
+        '<input type="radio" name="marryT2"> 四列'+
+        '</label>'+
+        '</div>'+
+        '</div>'
+    ;
+
+    var hand=0;
+    var hands=2;
+    var sure=true;
+
+
+    $('#handIn').on('click',function(){
+        $('.trees').empty();
+        $('#edit').html(Html);
+        $('.nameE input').trigger('click');
+        $('.telE input').trigger('click');
+        /*
+        if(sure==true){
+            $('.trees').empty();
+            $('#edit').html(Html);
+            $('.nameE input').trigger('click');
+            $('.telE input').trigger('click');
+            $('.trees').on('trigger','.nameE input','click');
+            $('.trees').on('trigger','.telE input','click');
+            sure=false;
+            console.log(sure);
+
+        }
+        */
+
+    });
+
+    $('.closeLine button').click(function(){
+        sure=true;
+        console.log(sure);
+        $('.space').empty();
+        $('.closeLine').hide();
+        $('#edit').empty();
+    });
+
+    $('.show').on('click','.close',function(){
+
+        $(this).parent().remove();
+        $('#edit').empty();
+
+    });
+
     $('#myCarousel').carousel({
         interval:2000
     });
+
+
 
 
 });
