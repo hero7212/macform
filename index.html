@@ -173,7 +173,14 @@
                 <label>描述文字</label>
                 <input type="color" class="form-control input-lg">
             </div>
-
+            <div class="form-group col-md-6">
+                <label>按钮文字</label>
+                <input type="color" class="form-control input-lg">
+            </div>
+            <div class="form-group col-md-6">
+                <label>按钮底色</label>
+                <input type="color" class="form-control input-lg">
+            </div>
         </div>
 
 
@@ -186,13 +193,16 @@
                 <h1 class="text-center">这里是标题</h1>
                 <h4 class="text-center">这里是副标题</h4>
             </div>
-            <div class="title title2 text-center">
-                <h2>这里是标题</h2>
+            <div class="title title2 text-left">
+                <h2 class="text-left">这里是标题</h2>
                 <em class="text-muted">2016-05-10 运动笔记 <span class="text-primary">南京跑步</span></em>
             </div>
-            <div class="title title3 text-center">
-                <h2>这里是标题</h2>
+            <div class="title title3 text-left">
+                <h2 class="text-left">这里是标题</h2>
                 <em class="text-muted">05-10 12:32 头条新闻</em>
+            </div>
+            <div class="shut">
+                <button class="close">&times;</button>
             </div>
             <div class="room" id="content">
                 <div class="space element" id="fields">
@@ -208,9 +218,9 @@
         </div>
 
         <div class="btnBox">
-            <button class="btn w-xs btn-primary">保存</button>
+            <button class="btn w-xs btn-primary">生成表单</button>
             <div class="fr">
-                <button class="btn w-xs btn-primary">发布</button>
+                <!--<button class="btn w-xs btn-primary">发布</button>-->
                 <button class="btn w-xs btn-default" id="watch" onclick="window.open('mobile.html')">预览</button>
             </div>
         </div>
@@ -223,12 +233,51 @@
             <p class="choose">请选择组件</p>
         </div>
         <div class="trees" id="edit">
+            <div class="form-group temp">
+                <label>请选择联系人模板</label>
+                <select class="form-control" id="tempSel">
+                    <option class="firstOP">请新建模板</option>
+                </select>
+                <div class="btnWrap">
+                    <button class="btn btn-primary pull-left" data-toggle="modal"
+                            data-target="#myModal">新增模板</button>
 
+                    <button class="btn btn-success pull-right">更新</button>
+                </div>
+
+            </div>
         </div>
     </div>
 </div>
 
-
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    请输入模板名称
+                </h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="modelName" class="form-control" placeholder="这里输入你想要的模板名称"/>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">关闭
+                </button>
+                <button type="button" class="btn btn-primary" id="subModel" data-dismiss="modal" onclick="window.open('new.html')">
+                    确定
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
@@ -246,6 +295,11 @@
 -->
 <script>
     $(function(){
+
+        //$('#phone').load('index.html #need');
+        var   $otherss=localStorage.getItem("pop-up-button");
+        $('#content').html($otherss);
+
         $('#editor').wysiwyg();
 
         $('#myCarousel').carousel({
@@ -254,6 +308,8 @@
     });
 
 </script>
+
+
 <!--
 <script type="text/javascript">
 

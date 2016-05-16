@@ -13,7 +13,7 @@ h3 i{cursor: pointer;; color: #fff}
 
 .main .col-md-4:nth-of-type(1){ padding: 0 20px 0 0;}
 .main .col-md-4:nth-of-type(2){ padding: 0}
-.main .col-md-4:nth-of-type(3){ padding: 0 0 0 20px}
+.main .col-md-4:nth-of-type(3){ padding: 0 0 0 20px;}
 .con{background: #fff; border: 1px solid #ddd; padding: 15px;height: 718px; overflow-y: auto}
 .main .col-md-4:nth-of-type(1) .con{border-top: 0;}
 .main .col-md-4:nth-of-type(3) h3{border-radius: 4px 4px 0 0 ;margin: 0; padding: 14px 10px 13px 10px}
@@ -59,10 +59,16 @@ h3 i{cursor: pointer;; color: #fff}
 
 .title em{
     font-style: normal;
+    padding-left: 20px;
 }
 
 .title1{
     display: block;
+}
+
+.show .text-left{
+    text-align: left;
+    padding-left:20px;
 }
 
 .formLabel{
@@ -143,6 +149,11 @@ h3 i{cursor: pointer;; color: #fff}
 
 }
 
+.shut{
+    padding-right: 15px;
+    display: none;
+}
+
 .room{
     padding: 0 15px !important;
 }
@@ -180,10 +191,24 @@ hr.clean{ margin: 15px 0}
 .con .checkbox, .con .radio{ margin: 0}
 .checkbox label.checkbox-block{margin:5px 0; display: block;}
 
-.chosen{
-    background: white;
+.conE{
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
     height: 718px;
     overflow-y: auto;
+}
+
+.chosen{
+
+}
+
+.trees{
+    position: relative;
+    z-index: 999999999;
+    top:-620px;
+    padding: 0 15px;
+    background: white;
 }
 
 .trees>.checkbox{
@@ -208,3 +233,19 @@ hr.clean{ margin: 15px 0}
     height:300px;
 }
 
+.temp{
+    display: none;
+}
+
+.btnWrap{
+    height: 40px;
+    margin:10px 0 6px;
+}
+
+#hard{
+    cursor: pointer;
+}
+
+input[type=color]{
+    cursor: pointer;
+}

@@ -588,8 +588,7 @@ $(function(){
             '<input type="radio" name="align2">右对齐'+
             '</label>'+
             '</div>'
-        ;
-    
+            ;
 
 
 
@@ -887,10 +886,12 @@ $(function(){
 
 
     $('#handIn').on('click',function(){
-        $('.trees').empty();
+        $('.shut').show();
+        $('.temp').show();
+        /*$('.trees').empty();
         $('#edit').html(Html);
         $('.nameE input').trigger('click');
-        $('.telE input').trigger('click');
+        $('.telE input').trigger('click');*/
         /*
         if(sure==true){
             $('.trees').empty();
@@ -922,9 +923,21 @@ $(function(){
 
     });
 
-    $('#myCarousel').carousel({
-        interval:2000
+    $('#subModel').click(function(){
+        var modelName=$('#modelName').val();
+        $('.firstOP').detach();
+        $('#tempSel').append(
+            '<option>'+
+                modelName+
+            '</option>'
+        );
+
     });
+
+    $('#save').click(function(){
+        alert('保存成功');
+    });
+
 
 
 

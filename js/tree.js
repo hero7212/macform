@@ -59,6 +59,7 @@ $(function(){
             '</div>'+
             '</div>'+
             '</div>';
+    var c=[c0,c1,c2,c3,c4,c5,c6,c7];
 
     $('.trees').on('click','.checkbox',function(e){
 
