@@ -532,6 +532,15 @@ $(function(){
                         '<input type="radio" name="disc">不显示'+
                     '</label>'+
                 '</div>'+
+            '<div class="form-group dection">'+
+                '<h4>轮播方向</h4>'+
+                '<label class="checkbox-inline">'+
+                '<input type="radio" name="dection">水平'+
+                '</label>'+
+                '<label class="checkbox-inline">'+
+                '<input type="radio" name="dection">垂直'+
+                '</label>'+
+                '</div>'+
             '</div>',
         word='<div class="form-group">'+
                 '<h4>效果选择</h4>'+

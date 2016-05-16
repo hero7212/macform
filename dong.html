@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="text" id="in1"/>
+<input type="text" id="in2"/>
+
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $(function(){
+        $('#in1').change(function(){
+            $('#in2').val($('#in1').val());
+        });
+    })
+</script>
+</body>
+</html>
