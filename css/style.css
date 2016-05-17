@@ -235,6 +235,9 @@ hr.clean{ margin: 15px 0}
 
 .temp{
     display: none;
+    position: relative;
+    top:-620px;
+    padding: 0 15px;
 }
 
 .btnWrap{

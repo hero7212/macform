@@ -7,8 +7,6 @@
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"/>
 
-    <link rel="stylesheet" href="css/banner.css"/>
-
     <style>
         .phoneWrap{
             position: relative;
@@ -26,6 +24,9 @@
             background: white;
             overflow: auto;
         }
+        .close{
+            display: none;
+        }
     </style>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -36,6 +37,7 @@
     <script>
         $(document).ready(function(){
             //$('#phone').load('index.html #need');
+
             var   $otherss=localStorage.getItem("pop-up-button");
             $('#phone').html($otherss);
 

@@ -531,24 +531,14 @@ $(function(){
                     '<label class="checkbox-inline">'+
                         '<input type="radio" name="disc">不显示'+
                     '</label>'+
-                '</div>'+
-            '<div class="form-group dection">'+
-                '<h4>轮播方向</h4>'+
-                '<label class="checkbox-inline">'+
-                '<input type="radio" name="dection">水平'+
-                '</label>'+
-                '<label class="checkbox-inline">'+
-                '<input type="radio" name="dection">垂直'+
-                '</label>'+
-                '</div>'+
-            '</div>',
+                '</div>',
         word='<div class="form-group">'+
-                '<h4>效果选择</h4>'+
+                '<h4>滚动效果选择</h4>'+
                 '<label class="checkbox-inline">'+
-                '<input type="radio" name="dir">显示'+
+                '<input type="radio" name="dir" class="xr">水平滚动'+
                 '</label>'+
                 '<label class="checkbox-inline">'+
-                '<input type="radio" name="dir">不显示'+
+                '<input type="radio" name="dir" class="yr">垂直滚动'+
                 '</label>'+
             '</div>'+
             '<div class="form-group">'+
@@ -622,39 +612,6 @@ $(function(){
     $('#content').on('click','.share',function(){
         $('#edit').html(line);
     });
-    /*
-    var nameTel='<div class="groupT bg-danger">'+
-                    nameT+telT+
-                '</div>'
-        ;
-    $('#edit').one('click','.companyT',function(){
-        //$(this).remove();
-        $('.groupT').append(companyT);
-        $('.handIn').append(company);
-    });
-    $('#edit').one('click','.emailT',function(){
-        //$(this).remove();
-        $('.groupT').append(emailT);
-        $('.handIn').append(email);
-    });
-    $('#edit').one('click','.qqT',function(){
-        $('.groupT').append(qqT);
-        $('.handIn').append(qq);
-    });
-    $('#edit').one('click','.wechatT',function(){
-        //$(this).remove();
-        $('.groupT').append(wechatT);
-        $('.handIn').append(wechat);
-    });
-    $('#edit').one('click','.sexT',function(){
-        $('.groupT').append(sexT);
-        $('.handIn').append(sex);
-    });
-    $('#edit').one('click','.marryT',function(){
-        $('.groupT').append(marryT);
-        $('.handIn').append(marry);
-    });
-    */
 
 
 
@@ -897,24 +854,6 @@ $(function(){
     $('#handIn').on('click',function(){
         $('.shut').show();
         $('.temp').show();
-        /*$('.trees').empty();
-        $('#edit').html(Html);
-        $('.nameE input').trigger('click');
-        $('.telE input').trigger('click');*/
-        /*
-        if(sure==true){
-            $('.trees').empty();
-            $('#edit').html(Html);
-            $('.nameE input').trigger('click');
-            $('.telE input').trigger('click');
-            $('.trees').on('trigger','.nameE input','click');
-            $('.trees').on('trigger','.telE input','click');
-            sure=false;
-            console.log(sure);
-
-        }
-        */
-
     });
 
     $('.closeLine button').click(function(){
@@ -922,7 +861,7 @@ $(function(){
         console.log(sure);
         $('.space').empty();
         $('.closeLine').hide();
-        $('#edit').empty();
+
     });
 
     $('.show').on('click','.close',function(){
@@ -943,10 +882,20 @@ $(function(){
 
     });
 
+
+
+    $('.trees').on('click','.xr',function(){
+        $('marquee').attr('direction','left');
+    });
+    $('.trees').on('click','.yr',function(){
+        $('marquee').attr('direction','up');
+    });
+
+
+
     $('#save').click(function(){
         alert('保存成功');
     });
-
 
 
 

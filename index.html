@@ -233,19 +233,20 @@
             <p class="choose">请选择组件</p>
         </div>
         <div class="trees" id="edit">
-            <div class="form-group temp">
-                <label>请选择联系人模板</label>
-                <select class="form-control" id="tempSel">
-                    <option class="firstOP">请新建模板</option>
-                </select>
-                <div class="btnWrap">
-                    <button class="btn btn-primary pull-left" data-toggle="modal"
-                            data-target="#myModal">新增模板</button>
 
-                    <button class="btn btn-success pull-right">更新</button>
-                </div>
+        </div>
+        <div class="form-group temp">
+            <label>请选择联系人模板</label>
+            <select class="form-control" id="tempSel">
+                <option class="firstOP">请新建模板</option>
+            </select>
+            <div class="btnWrap">
+                <button class="btn btn-primary pull-left" data-toggle="modal"
+                        data-target="#myModal">新增模板</button>
 
+                <button class="btn btn-success pull-right">更新</button>
             </div>
+
         </div>
     </div>
 </div>
@@ -282,6 +283,7 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+
 <script src="js/bootstrap-wysiwyg.js"></script>
 <script src="js/jquery.hotkeys.js"></script>
 <script src="js/homologous.js"></script>
@@ -289,14 +291,10 @@
 <script src="js/styleNav.js"></script>
 <script src="js/watch.js"></script>
 <script src="js/form_builder.min.js"></script>
-
-<!--
-<script type="text/javascript" src="http://7xjeen.com5.z0.glb.qiniucdn.com/rs/js/head.load.min.js"></script>
--->
 <script>
     $(function(){
 
-        //$('#phone').load('index.html #need');
+
         var   $otherss=localStorage.getItem("pop-up-button");
         $('#content').html($otherss);
 
@@ -310,31 +308,8 @@
 </script>
 
 
-<!--
-<script type="text/javascript">
 
-    var M={FRMNM:"表单名称",DESC:"",LANG:"cn",LBLAL:"T",CFMTYP:"T",CFMMSG:"提交成功。",SDMAIL:"0",CAPTCHA:"1",IPLMT:"0",SCHACT:"0",INSTR:"0",ISPUB:"1"}
-    var F=[];
-    var fieldsLimit=150;
-    var goodsNumber=60;
-    var imageNumber=10;
-    var LVL=0;
-    var CURUSER={"_id":{"date":1462333500000,"time":1462333500000,"timestamp":1462333500,"new":false,"timeSecond":1462333500,"inc":-617927116,"machine":217197755},"ADMIN":"1","USERNAME":"2423467330@qq.com","ACCCRT":"1"};
 
-    M.GID=M.GID || '';
-    var resRoot="http://7xjeen.com5.z0.glb.qiniucdn.com/rs",GOODSIMAGEURL="http://goodsimages.jsform.com/",IMAGESURL="http://imageimages.jsform.com/",GOODSIMAGESTYLE="@1e_200w_200h_1c_0i_1o_90Q_1x";
-    head.js("http://7xjeen.com5.z0.glb.qiniucdn.com/rs/js/jquery-1.7.2.min.js",
-            "http://7xjeen.com5.z0.glb.qiniucdn.com/rs/js/jquery-ui-1.8.24.custom.min.js",
-            "http://7xjeen.com5.z0.glb.qiniucdn.com/rs/js/ajaxfileupload.js?v=20160419",
-            "http://7xjeen.com5.z0.glb.qiniucdn.com/rs/js/utils.js?v=20160419",
-            "http://7xjeen.com5.z0.glb.qiniucdn.com/rs/js/widgets.js?v=20160419",
-            "http://7xjeen.com5.z0.glb.qiniucdn.com/rs/js/jquery.mCustomScrollbar.min.js?v=20160419",
-            "http://7xjeen.com5.z0.glb.qiniucdn.com/rs/js/jquery.mousewheel.min.js?v=20160419",
-            "http://7xjeen.com5.z0.glb.qiniucdn.com/rs/js/formbuilder.js?v=20160419",
-            "http://7xjeen.com5.z0.glb.qiniucdn.com/rs/js/address-cn.js?v=20160419");
-
-</script>
--->
 </body>
 </html>
 
