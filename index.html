@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <title>表单系统</title>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+    <link href="css/font.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"/>
 </head>
-<body>
+<body id="body">
 <div class="header">
 <div class="headerCon"><span class="fr">你好，iducky <a href="">[退出]</a></span>表单系统</div>
 </div>
 <div class="main">
     <h2>新建表单</h2>
-    <div class="col-md-4" id="tabs">
+    <div class="col-md-4 cols-4" id="tabs">
         <ul class="nav nav-tabs" ui-nav="">
             <li class="active">
               <a href="" class="son">表单设置</a>
@@ -28,39 +28,75 @@
         <div class="con" style="display: block;">
             <div class="styleChose">
                 <h3>样式选择</h3>
-                <ul class="nav nav-pills styleNav">
-                    <li class="active">
-                        <a class="style1">自动义样式</a>
-                    </li>
-                    <li class="">
-                        <a class="style2">今日头条样式</a>
-                    </li>
-                    <li class="">
-                        <a class="style3">微信样式</a>
-                    </li>
-                </ul>
+                <label class="radio-inline style1">
+                    <input type="radio" name="2" checked=""> 用户自定义
+                </label>
+                <label class="radio-inline style2">
+                    <input type="radio" name="2"> 微信详细页
+                </label>
+                <label class="radio-inline style3">
+                    <input type="radio" name="2"> 头条新闻
+                </label>
             </div>
             <h3>标题文字</h3>
-            <div class="form-group">
-                <label>标题</label>
-                <input class="form-control" placeholder="请输入标题">
+            <div class="Tc Tc1">
+                <div class="form-group">
+                    <label>标题</label>
+                    <input class="form-control c1I1" placeholder="请输入标题">
+                </div>
+                <div class="form-group">
+                    <label>副标题</label>
+                    <input class="form-control c1I2" placeholder="请输入副标题">
+                </div>
             </div>
-            <div class="form-group">
-                <label>副标题</label>
-                <input class="form-control" placeholder="请输入副标题">
+            <div class="Tc Tc2">
+                <div class="form-group">
+                    <label>微信标题</label>
+                    <input class="form-control c2I1" placeholder="请输入标题">
+                </div>
+                <div class="form-group">
+                    <label>选择日期</label>
+                    <input class="form-control c2I2" type="date">
+                </div>
+                <div class="form-group">
+                    <label>微信副标题</label>
+                    <input class="form-control c2I3" placeholder="请输入副标题">
+                </div>
+                <div class="form-group">
+                    <label>微信链接</label>
+                    <input class="form-control c2I4" placeholder="请输入副标题">
+                </div>
+            </div>
+            <div class="Tc Tc3">
+                <div class="form-group">
+                    <label>新闻标题</label>
+                    <input class="form-control c3I1" placeholder="请输入标题">
+                </div>
+                <div class="form-group">
+                    <label>选择日期</label>
+                    <input class="form-control c3I2" type="date">
+                </div>
+                <div class="form-group">
+                    <label>选择时间</label>
+                    <input class="form-control c3I3" type="time">
+                </div>
+                <div class="form-group">
+                    <label>副标题</label>
+                    <input class="form-control c3I4" placeholder="请输入副标题">
+                </div>
             </div>
             <hr>
             <!--<h3>表单提交</h3>-->
             <div class="form-group">
                 <label>表单提交后显示提示文字</label>
-                <input class="form-control" placeholder="请输入提示文字">
+                <input class="form-control toolI" placeholder="请输入提示文字">
             </div>
             <div class="form-group">
                 <label>表单按钮文字设置</label>
-                <input class="form-control" placeholder="请设置文字">
+                <input class="form-control subI" placeholder="请设置文字">
             </div>
             <div class="form-group">
-                    <label id="hard">高级设置 <span class="caret"></span></label>
+                    <label id="hard">高级设置 <span class="ca glyphicon glyphicon-chevron-right"></span></label>
                 <div class="jsCode">
                     <h6>嵌入js代码</h6>
                     <textarea class="form-control" name="" id="" cols="30" rows="10">
@@ -71,7 +107,7 @@
         </div>
 
         <div class="con" style="display: none;">
-           <div class="formCon">
+           <div class="formCon firstCon">
             <!--图片组件-->
             <div class="row">
                 <button class="btn btn-default" id="picture">
@@ -99,20 +135,20 @@
                    </button>
 
                </div>
-
-               <div class="row" style="margin-top: 10px;">
-
-                   <button class="btn btn-default" id="rich">
-                       富文本编辑器
-                   </button>
-
-               </div>
         </div>
             <hr class="clean" />
+            <div class="formCon">
+                <div class="row">
+                    <button class="btn btn-default" id="rich">
+                        富文本编辑器
+                    </button>
+                </div>
+            </div>
+            <hr class="clean"/>
            <div class="formCon">
             <!--表单提交组件-->
             <div class="row">
-                <button class="btn btn-warning" id="handIn">表单提交组件</button>
+                <button class="btn btn-default" id="handIn">表单提交组件</button>
             </div>
                <!--富文本-->
 
@@ -149,103 +185,72 @@
         </div>
         </div>
         <div class="con" style="display: none">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 styleC">
                 <label>背景颜色</label>
-                <input type="color" class="form-control input-lg">
+                <input type="color" class="form-control input-lg color0">
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 styleC">
                 <label>表头底色</label>
-                <input type="color" class="form-control input-lg">
+                <input type="color" class="form-control input-lg color1">
             </div>
-            <div class="form-group col-md-6">
-                <label>题目文字</label>
-                <input type="color" class="form-control input-lg">
-            </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 styleC">
                 <label>内容底色</label>
-                <input type="color" class="form-control input-lg">
+                <input type="color" class="form-control input-lg color2">
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 styleC">
                 <label>表头文字</label>
-                <input type="color" class="form-control input-lg">
+                <input type="color" class="form-control input-lg color3">
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 styleC">
+                <label>题目文字</label>
+                <input type="color" class="form-control input-lg color4">
+            </div>
+            <div class="form-group col-md-6 styleC">
                 <label>描述文字</label>
-                <input type="color" class="form-control input-lg">
+                <input type="color" class="form-control input-lg color5">
             </div>
-            <div class="form-group col-md-6">
-                <label>按钮文字</label>
-                <input type="color" class="form-control input-lg">
-            </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 styleC">
                 <label>按钮底色</label>
-                <input type="color" class="form-control input-lg">
+                <input type="color" class="form-control input-lg color6">
+            </div>
+            <div class="form-group col-md-6 styleC">
+                <label>按钮文字</label>
+                <input type="color" class="form-control input-lg color7">
             </div>
         </div>
-
-
-
-
     </div>
-    <div class="col-md-4 bg-danger" id="mobile">
+    <div class="col-md-4 cols-4" id="mobile">
         <div class="show" id="need">
             <div class="title title1 ">
-                <h1 class="text-center">这里是标题</h1>
-                <h4 class="text-center">这里是副标题</h4>
+                <h1 class="text-center c1L1">这里是标题</h1>
+                <h4 class="text-center c1L2">这里是副标题</h4>
             </div>
             <div class="title title2 text-left">
-                <h2 class="text-left">这里是标题</h2>
-                <em class="text-muted">2016-05-10 运动笔记 <span class="text-primary">南京跑步</span></em>
+                <h2 class="text-left c2L1">这里是标题</h2>
+                <em class="text-muted"><span class="c2L2">2016-05-10</span> <span class="c2L3">运动笔记</span> <span class="text-primary c2L4">南京跑步</span></em>
             </div>
             <div class="title title3 text-left">
-                <h2 class="text-left">这里是标题</h2>
-                <em class="text-muted">05-10 12:32 头条新闻</em>
-            </div>
-            <div class="shut">
-                <button class="close">&times;</button>
+                <h2 class="text-left c3L1">这里是标题</h2>
+                <em class="text-muted"><span class="c3L2">2016-05-10</span> <span class="c3L3">12:32</span> <span class="c3L4">头条新闻</span></em>
             </div>
             <div class="room" id="content">
-                <div class="space element" id="fields">
-                    <div class="closeLine">
-                        <button class="close">&times;</button>
-                    </div>
-                </div>
+
 
             </div>
-
-
-
         </div>
-
         <div class="btnBox">
             <button class="btn w-xs btn-primary">生成表单</button>
             <div class="fr">
-                <!--<button class="btn w-xs btn-primary">发布</button>-->
                 <button class="btn w-xs btn-default" id="watch" onclick="window.open('mobile.html')">预览</button>
             </div>
         </div>
     </div>
-
-
-    <div class="col-md-4 chosen">
+    <div class="col-md-4 cols-4 chosen">
         <h3>组件编辑</h3>
         <div class="conE">
             <p class="choose">请选择组件</p>
         </div>
         <div class="trees" id="edit">
-
-        </div>
-        <div class="form-group temp">
-            <label>请选择联系人模板</label>
-            <select class="form-control" id="tempSel">
-                <option class="firstOP">请新建模板</option>
-            </select>
-            <div class="btnWrap">
-                <button class="btn btn-primary pull-left" data-toggle="modal"
-                        data-target="#myModal">新增模板</button>
-
-                <button class="btn btn-success pull-right">更新</button>
-            </div>
 
         </div>
     </div>
@@ -254,7 +259,7 @@
 <!-- 模态框（Modal） -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog" style="top:300px;">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close"
@@ -266,7 +271,7 @@
                 </h4>
             </div>
             <div class="modal-body">
-                <input type="text" id="modelName" class="form-control" placeholder="这里输入你想要的模板名称"/>
+                <input type="text" id="modelName" class="form-control" value="新建模板"/>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default"
@@ -282,34 +287,54 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-
-<script src="js/bootstrap-wysiwyg.js"></script>
 <script src="js/jquery.hotkeys.js"></script>
-<script src="js/homologous.js"></script>
-<script src="js/tree.js"></script>
-<script src="js/styleNav.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-wysiwyg.js"></script>
 <script src="js/watch.js"></script>
+<script src="js/homologous.js"></script>
+<script src="js/style.js"></script>
+<script src="js/styleNav.js"></script>
+<script src='js/tinymce/js/tinymce/tinymce.min.js'></script>
 <script src="js/form_builder.min.js"></script>
 <script>
+    //艳文表单代码
+    function ini(id){
+        tinymce.init({
+            selector: id,
+            height: 500,
+            theme: 'modern',
+            plugins: [
+                'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+                'searchreplace wordcount visualblocks visualchars code fullscreen',
+                'insertdatetime media nonbreaking save table contextmenu directionality',
+                'emoticons template paste textcolor colorpicker textpattern imagetools'
+            ],
+            toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+            toolbar2: 'print preview media | forecolor backcolor emoticons',
+            image_advtab: true,
+            templates: [
+                { title: 'Test template 1', content: 'Test 1' },
+                { title: 'Test template 2', content: 'Test 2' }
+            ],
+            content_css: [
+                '//fast.fonts.net/cssapi/e6dc9b99-64fe-4292-ad98-6974f93cd2a2.css',
+                '//www.tinymce.com/css/codepen.min.css'
+            ]
+        });
+    }
+
+
+</script>
+<script>
+    /*
     $(function(){
-
-
+        //页面保存
         var   $otherss=localStorage.getItem("pop-up-button");
         $('#content').html($otherss);
 
-        $('#editor').wysiwyg();
-
-        $('#myCarousel').carousel({
-            interval:2000
-        });
     });
-
+    */
 </script>
-
-
-
-
 </body>
 </html>
 

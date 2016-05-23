@@ -4,17 +4,31 @@
     <meta charset="UTF-8">
     <title>联系人模板</title>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+    <link href="css/font.css" rel="stylesheet">
     <link rel="stylesheet" href="css/new.css"/>
+    <script src="js/avalon.modern.js"></script>
+    <script>
+        var vm=avalon.define({
+            $id: "test",
+            name: "请输入标题",
+            name2:"这里是副标题",
+            name3:"请输入对图片的描述"
 
 
+        });
+    </script>
 </head>
-<body>
+<body ms-controller="test" id="nBody">
+<div class="header">
+    <div class="headerCon"><span class="fr">你好，iducky <a href="">[退出]</a></span>表单系统</div>
+</div>
+<div id="sC" class="main mainfix">
+    <h2>新建表单模板 "联系人表单"</h2>
     <div class="container-fluid">
-        <div class="col-md-4 subForm">
+        <div class="col-md-4 cols-4 subForm">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">提交表单</h3>
+                    <h3 class="panel-title">表单组件</h3>
                 </div>
                 <div class="panel-body">
                     <button class="btn btn-primary btn-block">姓名</button>
@@ -29,26 +43,30 @@
 
             </div>
         </div>
-        <div class="col-md-4 subShow">
+        <div class="col-md-4 cols-4 subShow">
             <div class="panel panel-primary">
-                <div class="panel-body" id="fields">
+                <div class="panel-heading">
+                    <h3 class="panel-title">表单预览</h3>
+                </div>
+                <div class="panel-body moveS" id="fields">
 
                 </div>
-                <div class="panel-footer">
-                    <h3 class="panel-title">
-                        <button class="btn btn-warning" id="save">保存</button>
-                    </h3>
-                </div>
+
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 cols-4">
             <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">编辑组件</h3>
+                </div>
                 <div class="panel-body" id="edits">
 
                 </div>
             </div>
         </div>
     </div>
+</div>
+<div class="btnBt"><button class="btn btn-warning" id="save">保存表单模板</button></div>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/homologous.js"></script>

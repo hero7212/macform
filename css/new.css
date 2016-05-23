@@ -1,3 +1,133 @@
+body{background:#f9f9f9;font-family: tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;font-size: 14px;}
+.header{background: #333; padding:0 20px;color: #ccc; height: 50px; line-height: 50px; width: 100%}
+.headerCon{width: 1200px; margin:auto; }
+.fr{ float: right;}
+.mb{ margin-bottom: 10px}
+.header a{color: #6b6b6b; cursor: pointer;}
+.header .fr{ font-size: 12px}
 
+.main{width: 1200px; margin:auto;}
+.main h2{font-size: 18px; margin: 20px 0}
+.main h3{ font-size: 14px; margin: 0 0 15px 0; padding: 10px; background:#337ab7; color: #def0ff; border-radius: 4px}
+.main h3 i{cursor: pointer;; color: #fff}
 
+.main .cols-4:nth-of-type(1){ padding: 0 20px 0 0;}
+.main .cols-4:nth-of-type(2){ padding: 0}
+.main .cols-4:nth-of-type(3){ padding: 0 0 0 20px;}
+.con{background: #fff; border: 1px solid #eee; padding: 15px;height: 718px; overflow-y: auto}
+.main .cols-4:nth-of-type(1) .con{border-top: 0;}
+.main .cols-4:nth-of-type(3) h3{border-radius: 4px 4px 0 0 ;margin: 0; padding: 14px 10px 13px 10px}
 
+.show{background: #fff; border: 1px solid #eee; height: 705px; overflow-x: hidden;overflow-y: auto; position: relative; border-bottom: 0}
+.show h2,.show h4{ text-align: center; margin: 15px 0;}
+.show h2{ font-size: 18px}
+.show h4{ font-size: 14px}
+.show .form-group{ padding:0}
+.btnBox{padding: 10px; background: #f2f2f2; width: 400px; border: 1px solid #eee; border-top: 0}
+
+.con button{}
+.show>.form-group:hover{ border: 1px dashed #c0c0c0}
+.show>.form-group{
+    position: relative;
+    cursor: move;
+}
+
+.formCon .row{ float: left; margin:0 10px 0 0}
+.clean{ clear: both;}
+hr.clean{ margin: 15px 0}
+.formCon{ overflow: hidden;}
+.con .checkbox, .con .radio{ margin: 0}
+.checkbox label.checkbox-block{margin:5px 0; display: block;}
+
+.container-fluid{ padding: 0}
+.panel-heading{ padding: 0}
+.panel-title{ font-size: 14px;color: #def0ff;}
+.panel-body{background: #fff;border: 1px solid #eee;padding: 15px;height: 718px;overflow-y: auto;}
+.panel-primary{border: 0}
+.panel-heading{border-radius: 4px 4px 0 0}
+.btn-block{width: auto;display: inline-block; margin-bottom: 10px}
+.btn-block+.btn-block {margin-top:0;}
+.btn-primary {color: #333;background-color: #fff;border-color: #ccc;}
+.btn-default.disabled, .btn-default.disabled.active, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled:focus, .btn-default.disabled:hover, .btn-default[disabled], .btn-default[disabled].active, .btn-default[disabled].focus, .btn-default[disabled]:active, .btn-default[disabled]:focus, .btn-default[disabled]:hover, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default.active, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:hover {background-color: #286090;border-color: #204d74;color:#fff}
+.main .col-md-4:nth-of-type(3) h3.panel-title {padding:10px;}
+.btnBt{ position: fixed;bottom: 0; padding: 10px; text-align: center;; width: 100%; background: #fff; border-top: 1px solid #eee}
+.mainfix{
+    padding-bottom: 45px;
+    padding-top:40px ;
+}
+
+.mainfix h5{
+    font-weight: 700;
+}
+
+.subShow .col-md-4 {
+    padding: 0 !important;
+}
+
+.subShow .wrap .text-left{
+    padding: 0;
+}
+
+.subShow .wrap .text-left input{
+    /*margin-left:-13px;*/
+}
+
+.block{
+    display: block;
+}
+
+.close3{
+    color: white !important;
+    top:-12px;
+    right:-8px;
+    background: red !important;
+    border-radius: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    font-size: 16px;
+    text-align: center;
+}
+
+.close4{
+
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+    position: relative;
+    z-index: 999;
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+}
+
+.error{
+    color: red;
+}
+
+.likeH{
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.nameS , .telS , .companyS , .sexS , .emailS , .qqS , .wechatS , .marryS{
+    clear: both;
+    border: 1px solid white;
+}
+
+.marryS{
+    padding-bottom: 40px;
+}
+
+.field:hover{
+    border: 1px dashed #eee;
+    background: #fcf8e3;
+}

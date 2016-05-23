@@ -3,19 +3,49 @@
  */
 $(function(){
 
-
-    $('.styleNav>li').click(function(){
-        $(this).addClass('active').siblings().removeClass('active');
-    });
-
+    //切换标题
     $('.style1').click(function(){
         $('.title1').show().siblings('.title').hide();
+        $('.Tc1').show().siblings('.Tc').hide();
     });
     $('.style2').click(function(){
         $('.title2').show().siblings('.title').hide();
+        $('.Tc2').show().siblings('.Tc').hide();
     });
     $('.style3').click(function(){
         $('.title3').show().siblings('.title').hide();
+        $('.Tc3').show().siblings('.Tc').hide();
+    });
+    //左边的区域的联动
+    $('.c1I1').keyup(function(){
+         $('.c1L1').text($(this).val());
+    });
+    $('.c1I2').keyup(function(){
+        $('.c1L2').text($(this).val());
+    });
+    $('.c2I1').keyup(function(){
+        $('.c2L1').text($(this).val());
+    });
+    $('.c2I2').change(function(){
+        $('.c2L2').text($(this).val());
+    });
+    $('.c2I3').keyup(function(){
+        $('.c2L3').text($(this).val());
+    });
+    $('.c2I4').keyup(function(){
+        $('.c2L4').text($(this).val());
+    });
+    $('.c3I1').keyup(function(){
+        $('.c3L1').text($(this).val());
+    });
+    $('.c3I2').change(function(){
+        $('.c3L2').text($(this).val());
+    });
+    $('.c3I3').change(function(){
+        $('.c3L3').text($(this).val());
+    });
+    $('.c3I4').keyup(function(){
+        $('.c3L4').text($(this).val());
     });
 });
 

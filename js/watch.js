@@ -2,15 +2,26 @@
  * Created by hg on 2016/5/13.
  */
 
-$(function(){
+$(function(){//保存页面
       $('#watch').click(function(){
             var phone=$('#need').html();
-            //alert(phone);
+
             localStorage.setItem("pop-up-button",phone);
+
+            var ground=$('#need').css('background-color');
+            //alert(ground);
       });
+
       $('#save').click(function(){
-            var formH=$('#fields').html();
-            localStorage.setItem("pop-up-button",formH);
+            alert('保存成功！点击导入模板，可以导入你设置的表单界面');
+            var f=$('#fields').html();
+            localStorage.setItem("fresh",f);
+            var sH=$('#sC').html();
+            localStorage.setItem("bh",sH);
+
+            var moS=$('.moveS').html();
+            localStorage.setItem("ms",moS);
+
       });
 
 });

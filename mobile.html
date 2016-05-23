@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"/>
-
+    <link rel="stylesheet" href="css/new.css"/>
     <style>
         .phoneWrap{
             position: relative;
@@ -27,23 +27,87 @@
         .close{
             display: none;
         }
+        .toolW {
+            display: block;
+        }
+        .toolW .close{
+            display: block;
+        }
+        .element{
+            border: 0;
+        }
+        .element:hover{
+            border: 0;
+        }
+        .title2, .title3 {
+            position: relative;
+            left: 0;
+        }
+        .title2 .text-left{
+            padding-left: 20px;
+        }
+        .title3.text-left{
+            padding-left: 20px;
+        }
+        .close3{
+            display: none !important;
+        }
+        .shut{
+            display: none !important;
+        }
+        .error{
+            color: red;
+        }
+        .sexS{
+            clear: both;
+        }
+        .field:hover{
+            background: transparent;
+            border:1px solid transparent;
+        }
     </style>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-wysiwyg.js"></script>
-    <script src="js/jquery.hotkeys.js"></script>
+    <script src="js/watch.js"></script>
 
     <script>
         $(document).ready(function(){
-            //$('#phone').load('index.html #need');
-
             var   $otherss=localStorage.getItem("pop-up-button");
             $('#phone').html($otherss);
-
-            $('#myCarousel').carousel({
+            //$('#phone').css('background-color',ground);
+            $('#phone *').attr('disabled',null);
+            $('.element').removeClass('bg-warning');
+            $('.element .close').remove();
+            $('.slide').carousel({
                 interval:2000
             });
+            $('.field input').attr({readonly:null});
+            $('.subBtn').addClass('disabled');
+
+            var timer=null;
+            var timer2=null;
+            var yy=0;
+            function autoPlay(){
+                timer= setInterval(function(){
+                    var scDiv=$('.listScroll>div').first();
+                    $('.listScroll').animate({top:0},0).append(scDiv);
+                },1000*$('.listScroll>div').length);
+                //
+            }
+            function autoPlay2(){
+                timer2=setInterval(function(){
+                    yy++;
+                    if(yy>$('.listScroll>div').length){
+                        yy=0;
+                    }
+                    $('.listScroll').animate({top:-20},1000);
+                    //*yy
+
+                },2000);
+            }
+            autoPlay();
+            autoPlay2();
         });
 
 
