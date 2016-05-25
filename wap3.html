@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>手机预览</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+
+    <style>
+        .show{
+            height: auto;
+            width: 100%;
+        }
+        .close{
+            display: none;
+        }
+        .carousel-inner>.item>img{
+            width: 100%;
+        }
+    </style>
+    <script src="js/htmlFont.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="show" id="need" style="background: rgb(128, 64, 64);">
+        <div class="title title1 " style="color: rgb(128, 255, 128); background: rgb(192, 192, 192);">
+            <h1 class="text-center c1L1">这里是标题</h1>
+            <h4 class="text-center c1L2">这里是副标题</h4>
+        </div>
+        <div class="title title2 text-left" style="color: rgb(128, 255, 128); background: rgb(192, 192, 192);">
+            <h2 class="text-left c2L1">这里是标题</h2>
+            <em class="text-muted"><span class="c2L2">2016-05-10</span> <span class="c2L3">运动笔记</span> <span class="text-primary c2L4">南京跑步</span></em>
+        </div>
+        <div class="title title3 text-left" style="color: rgb(128, 255, 128); background: rgb(192, 192, 192);">
+            <h2 class="text-left c3L1">这里是标题</h2>
+            <em class="text-muted"><span class="c3L2">2016-05-10</span> <span class="c3L3">12:32</span> <span class="c3L4">头条新闻</span></em>
+        </div>
+        <div class="room ui-droppable ui-sortable" id="content">
+
+
+            <div class="form-group element img"><button class="close">×</button><img src="http://www.mikecrm.com/images/icon/formDefaultPicture.png" style="width: 100%;"><h6 class="picWordL speak" style="color: rgb(255, 0, 128);">fasdfdasfdsfdf</h6></div><div class="element banner"><button class="close" style="position: relative;">×</button><div id="myCarousel" class="carousel slide"><ol class="carousel-indicators"><li data-target="#myCarousel" data-slide-to="0" class="active"></li><li data-target="#myCarousel" data-slide-to="1"></li><li data-target="#myCarousel" data-slide-to="2"></li></ol><div class="carousel-inner"><div class="item active"><img src="img/3.jpg" alt="第一张"></div><div class="item"><img src="img/4.jpg" alt="第二张"></div><div class="item"><img src="img/5.jpg" alt="第三张"></div></div></div></div><div class="form-group element img"><button class="close">×</button><img src="http://www.mikecrm.com/images/icon/formDefaultPicture.png" style="width: 100%;"><h6 class="picWordL speak" style="color: rgb(255, 0, 128);">fasdfdasfdsfdsf1</h6></div><div class="element share"><button class="close">×</button><p class="text-black shareTitleL timu" style="color: rgb(0, 0, 64);">分割线</p><hr><p class="text-muted shareWordL speak" style="color: rgb(255, 0, 128);">fasdfdasfdfdfdfasdf</p></div><div class="element notice"><button class="close marqueeClose">×</button>   <div class="listNotice"><div class="listScroll" style="top: -20px;"><div style="color: rgb(128, 255, 128); background: rgb(128, 0, 0);">3</div><div style="color: rgb(128, 255, 128); background: rgb(128, 0, 0);">4</div><div style="color: rgb(128, 255, 128); background: rgb(128, 0, 0);">5</div><div style="color: rgb(128, 255, 128); background: rgb(128, 0, 0);">6</div><div style="color: rgb(128, 255, 128); background: rgb(128, 0, 0);">1</div><div style="color: rgb(128, 255, 128); background: rgb(128, 0, 0);">2</div></div></div></div><div class="space element" id="fields"><div><button class="close3">×</button><div></div></div><div class="form-group field qqS"><div class="closeLine"><button class="close close3">×</button></div><label class="qqL timu ne5">QQ号码</label><input class="form-control" type="text" readonly="readonly"></div><div class="form-group field wechatS"><div class="closeLine"><button class="close close3">×</button></div><label class="wechatL timu ne6">微信号码</label><input class="form-control" type="text" readonly="readonly"></div><div class="form-group field marryS"><div class="closeLine"><button class="close close3">×</button></div><h5 class="marryL timu ne7">单选设置</h5><div class="wrap"><div class="col-md-6 text-left mard mar4"><label class="checkbox-inline "><input type="radio" name="marry" class="" readonly="readonly"><span>选项</span></label></div><div class="col-md-6 text-left mard mar4"><label class="checkbox-inline"><input type="radio" name="marry" class="" readonly="readonly"><span>选项</span></label></div><div class="col-md-6 text-left mard mar4"><label class="checkbox-inline"><input type="radio" name="marry" class="" readonly="readonly"><span>选项</span></label></div><div class="col-md-6 text-left mard mar4"><label class="checkbox-inline"><input type="radio" name="marry" class="" readonly="readonly"><span>选项</span></label></div></div></div><button class="btn btn-danger subBtn" disabled="">提交</button></div><div class="element richArea bg-warning"><div class="closeLine2"><botton class="close3">×</botton></div><div class="richZone"><p style="text-align: center;" data-mce-style="text-align: center;"><span style="color: rgb(255, 0, 0);" data-mce-style="color: #ff0000;">fasdfdasfdsfdfdsf</span></p></div></div></div>
+    </div>
+
+
+
+    <script>
+        var html = $('link').eq(0).attr('href');
+        $.get(html, function(result){
+
+            var new_style = result.toString().replace(/px/g, "rem");
+
+            $('html').prepend('<style>'+new_style+'</style>');
+            $('link').eq(0).remove();
+
+
+        });
+        $('#myCarousel').carousel({
+            interval:2000
+        });
+    </script>
+</body>
+</html>

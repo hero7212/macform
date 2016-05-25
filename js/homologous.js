@@ -293,6 +293,8 @@ $(function(){
 
         '</div>';
 
+    //保存右侧模板编辑区
+
 
     //节点操作
     var sure=true;
@@ -303,7 +305,7 @@ $(function(){
         }else{
             $('.choose').hide();
         }
-        $('.trees').empty().append(temps);
+        $('.trees').html(temps);
     });
     //移除
     $('.closeLine button').click(function(){
@@ -452,7 +454,7 @@ $(function(){
         );
         $('.listScroll').contents().filter(function(){ return this.nodeType != 1; }).wrap('<div></div>');
         clearInterval(timer2);
-        //clearInterval(timer);
+        clearInterval(timer);
 
     });
     $(document).on('mouseleave','.textarea',function(){

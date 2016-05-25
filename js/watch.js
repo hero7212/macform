@@ -22,6 +22,7 @@ $(function(){//保存页面
             var moS=$('.moveS').html();
             localStorage.setItem("ms",moS);
 
+
       });
 
 });
